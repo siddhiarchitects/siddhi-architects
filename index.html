@@ -1,87 +1,222 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Siddhi Architects - Interiors and Architecture</title>
-    <meta name="description" content="Siddhi Architects - Elegant Interiors & Architectural Excellence. Designing Dreams, Building Realities.">
-    <meta name="keywords" content="Interiors, Architecture, Design, Siddhi Architects">
-    <meta name="author" content="Siddhi Architects">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Siddhi Architects - Elegant Interiors & Architecture</title>
+  <style>
+    /* Reset and base */
+    body, h1, h2, p, ul, li, a, button {
+      margin: 0; padding: 0; box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    body {
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+    a {
+      text-decoration: none;
+      color: #b68f2c;
+    }
+    header {
+      background: #0b1d3e;
+      color: #c4a35b;
+      padding: 1rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+    nav ul li a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 0 1rem;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      max-width: 700px;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+    }
+    .hero p {
+      font-size: 1.25rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      text-shadow: 0 0 8px rgba(0,0,0,0.6);
+    }
+    .hero button {
+      background: #b68f2c;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      font-size: 1rem;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px rgba(182,143,44,0.5);
+      transition: background 0.3s ease;
+    }
+    .hero button:hover {
+      background: #8a6e1f;
+    }
+    .section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .section h2 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #0b1d3e;
+      margin-bottom: 3rem;
+    }
+    .services {
+      display: flex;
+      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .service-item {
+      background: white;
+      flex: 1 1 280px;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: box-shadow 0.3s ease;
+    }
+    .service-item:hover {
+      box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+    }
+    .service-item img {
+      width: 60px;
+      margin-bottom: 1rem;
+    }
+    .portfolio {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .portfolio img {
+      width: 100%;
+      border-radius: 8px;
+      object-fit: cover;
+      height: 180px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .portfolio img:hover {
+      transform: scale(1.05);
+    }
+    footer {
+      background: #0b1d3e;
+      color: #c4a35b;
+      text-align: center;
+      padding: 1rem 2rem;
+    }
+    /* Responsive */
+    @media(max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <header>
-    <div class="container header-container">
-      <img src="logo.PNG" alt="Siddhi Architects Logo">
 
-      <nav>
-        <a href="#home" class="nav-link">Home</a>
-        <a href="#about" class="nav-link">About Us</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#services" class="nav-link">Services</a>
-        <a href="#contact" class="nav-link">Contact</a>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="logo">Siddhi Architects</div>
+  <nav>
+    <ul>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#about">About Us</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <section id="home" class="hero-section">
-    <div class="container hero-content">
-      <h1>Designing Dreams, Building Realities</h1>
-      <p>Elegant Interiors & Architectural Excellence</p>
-      <a href="#portfolio" class="btn-primary">View Our Work</a>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Designing Dreams, Building Realities</h1>
+  <p>Elegant Interiors & Architectural Excellence</p>
+  <button onclick="window.location.href='#portfolio'">View Our Work</button>
+</section>
 
-  <section id="about" class="section-light">
-    <div class="container">
-      <h2>About Siddhi Architects</h2>
-      <p>
-        At Siddhi Architects, we blend creativity with precision to transform your spaces into timeless masterpieces. Our team of expert architects and interior designers deliver tailored solutions for residential, commercial, and turnkey projects.
-      </p>
+<section id="services" class="section">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-item">
+      <img src="https://img.icons8.com/dusk/64/000000/room.png" alt="Interior Design" />
+      <h3>Interior Design</h3>
+      <p>Creative interior solutions to transform your space beautifully.</p>
     </div>
-  </section>
+    <div class="service-item">
+      <img src="https://img.icons8.com/dusk/64/000000/architect.png" alt="Architecture" />
+      <h3>Architecture</h3>
+      <p>Innovative architectural design for residential and commercial projects.</p>
+    </div>
+    <div class="service-item">
+      <img src="https://img.icons8.com/dusk/64/000000/paint-palette.png" alt="Customization" />
+      <h3>Customization</h3>
+      <p>Personalized design and decor tailored to your needs.</p>
+    </div>
+  </div>
+</section>
 
-  <section id="portfolio" class="section-dark">
-    <div class="container">
-      <h2>Our Portfolio</h2>
-      <div class="portfolio-grid">
-        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?auto=format&fit=crop&w=600&q=80" alt="Modern Living Room" />
-        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=600&q=80" alt="Office Space Design" />
-        <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=600&q=80" alt="Contemporary Kitchen" />
-        <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=600&q=80" alt="Luxury Bedroom" />
-      </div>
-    </div>
-  </section>
+<section id="portfolio" class="section">
+  <h2>Portfolio</h2>
+  <div class="portfolio">
+    <img src="https://images.unsplash.com/photo-1501183638714-5e3c13766f45?auto=format&fit=crop&w=800&q=80" alt="Project 1" />
+    <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Project 2" />
+    <img src="https://images.unsplash.com/photo-1505692794403-4116e0ac64de?auto=format&fit=crop&w=800&q=80" alt="Project 3" />
+    <img src="https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80" alt="Project 4" />
+  </div>
+</section>
 
-  <section id="services" class="section-light">
-    <div class="container">
-      <h2>Our Services</h2>
-      <ul class="services-list">
-        <li>Residential Interior Design</li>
-        <li>Commercial Architecture</li>
-        <li>3D Visualization & Modeling</li>
-        <li>Turnkey Project Management</li>
-      </ul>
-    </div>
-  </section>
+<section id="about" class="section">
+  <h2>About Siddhi Architects</h2>
+  <p style="max-width: 700px; margin: 0 auto; font-size: 1.1rem; color: #555;">
+    Siddhi Architects specializes in delivering elegant and functional interior and architectural designs that bring your dream spaces to life. Our team of experts focuses on creativity, quality, and client satisfaction.
+  </p>
+</section>
 
-  <section id="contact" class="section-dark contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <p>Email: <a href="mailto:contact@siddhiarchitects.com">contact@siddhiarchitects.com</a></p>
-      <p>Phone: +91-XXXXXXXXXX</p>
-      <div class="social-links">
-        <a href="https://instagram.com/siddhi_architects" target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.youtube.com/channel/UCFn7vhfw-Ar9G4VMYScM9tg" target="_blank" aria-label="YouTube">
-          <i class="fab fa-youtube"></i>
-        </a>
-      </div>
-    </div>
-  </section>
+<section id="contact" class="section" style="text-align:center;">
+  <h2>Contact Us</h2>
+  <p>Phone: +91 12345 67890</p>
+  <p>Email: contact@siddhiarchitects.com</p>
+  <p>Address: 123, Architecture Lane, Your City, India</p>
+</section>
 
-  <footer>
-    <div class="container">
-      <p>© 2025 Siddhi Architects. All Rights Reserved.</p>
-    </div>
-  </footer>
+<footer>
+  &copy; 2025 Siddhi Architects. All rights reserved.
+</footer>
+
 </body>
 </html>
