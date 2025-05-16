@@ -75,11 +75,19 @@ export default function HomePage() {
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gray-50 py-16 text-center">
-        <h1 className="text-4xl font-bold mb-4">We Design Your Dream Space</h1>
-        <p className="text-gray-600 mb-6">Personalized interiors, expert execution, and complete peace of mind</p>
-        <Button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 text-lg rounded-full">Get Free Consultation</Button>
-      </section>
+<section
+  className="relative h-[80vh] bg-cover bg-center flex flex-col items-center justify-center text-white text-center"
+  style={{ backgroundImage: "url('/hero-banner.png')" }}
+>
+  <div className="bg-black bg-opacity-50 p-6 rounded-lg">
+    <h1 className="text-4xl font-bold mb-4">We Design Your Dream Space</h1>
+    <p className="text-lg mb-6">Personalized interiors, expert execution, and complete peace of mind</p>
+    <Button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 text-lg rounded-full">
+      Get Free Consultation
+    </Button>
+  </div>
+</section>
+
 
       {/* Service Cards */}
       <section className="py-12 bg-white">
