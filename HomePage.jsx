@@ -1,35 +1,111 @@
-// HomePage.jsx
+import React from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
 
-import React from 'react';
-import { Link } from 'react-router-dom'; // If you're using react-router for navigation
-
-const HomePage = () => {
+export default function HomePage() {
   return (
-    <header className="bg-white shadow">
-      <nav className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-gray-800">SIDDHI ARCHITECTS</div>
-        <ul className="flex space-x-6">
-          <li className="relative group">
-            <button className="text-gray-800 hover:text-pink-600 focus:outline-none">
-              Interiors
-            </button>
-            <ul className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <li><Link to="/modular-kitchens" className="block px-4 py-2 hover:bg-gray-100">Modular Kitchens</Link></li>
-              <li><Link to="/wardrobes" className="block px-4 py-2 hover:bg-gray-100">Wardrobes</Link></li>
-              <li><Link to="/living-rooms" className="block px-4 py-2 hover:bg-gray-100">Living Rooms</Link></li>
-              <li><Link to="/bedrooms" className="block px-4 py-2 hover:bg-gray-100">Bedrooms</Link></li>
-              <li><Link to="/full-home-interiors" className="block px-4 py-2 hover:bg-gray-100">Full Home Interiors</Link></li>
-              <li><Link to="/commercial-projects" className="block px-4 py-2 hover:bg-gray-100">Commercial Projects</Link></li>
-            </ul>
-          </li>
-          <li><Link to="/design-ideas" className="text-gray-800 hover:text-pink-600">Design Ideas</Link></li>
-          <li><Link to="/magazine" className="text-gray-800 hover:text-pink-600">Magazine</Link></li>
-          <li><Link to="/siddhiarchitects-tv" className="text-gray-800 hover:text-pink-600">SiddhiArchitects TV</Link></li>
-          <li><Link to="/cities" className="text-gray-800 hover:text-pink-600">Cities</Link></li>
-        </ul>
-      </nav>
-    </header>
-  );
-};
+    <div className="min-h-screen bg-white text-black">
+      {/* Header */}
+      <header className="sticky top-0 z-50 bg-white shadow-sm border-b">
+        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+          <div className="text-2xl font-bold text-pink-600">Siddhi Architects</div>
+          <nav className="space-x-6 text-sm font-medium hidden md:flex">
+            <div className="group relative">
+              <span className="cursor-pointer">Interiors</span>
+              <div className="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg hidden group-hover:block z-50">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Modular Kitchens</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wardrobes</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Living Rooms</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Bedrooms</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Full Home Interiors</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Commercial Projects</a>
+              </div>
+            </div>
+            <div className="group relative">
+              <span className="cursor-pointer text-pink-500">Design Ideas &#x25BE;</span>
+              <div className="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg hidden group-hover:block z-50">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Modular Kitchen Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wardrobe Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Living Room Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Bedroom Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Kids Room Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">TV Unit Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">False Ceiling Designs</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Pooja Room Designs</a>
+              </div>
+            </div>
+            <div className="group relative">
+              <span className="cursor-pointer">Magazine &#x25BE;</span>
+              <div className="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg hidden group-hover:block z-50 grid grid-cols-2 gap-2 p-2">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Room Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Organisation</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Decor & Inspiration</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Materials Guide</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Ceiling Design</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Renovation Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Furniture Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Decor</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Lighting Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wall Design Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Expert Advice</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Interior Advice</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Vastu Tips</a>
+              </div>
+            </div>
+            <div className="group relative">
+              <span className="cursor-pointer">SiddhiArchitects TV</span>
+            </div>
+            <div className="group relative">
+              <span className="cursor-pointer">Cities &#x25BE;</span>
+              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden group-hover:block z-50">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Vijayawada</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Guntur</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Chirala</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Nellore</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Kadapa</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Hyderabad</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Bangalore</a>
+              </div>
+            </div>
+            <div className="group relative">
+              <span className="cursor-pointer">Siddhi Portfolio</span>
+            </div>
+          </nav>
+        </div>
+      </header>
 
-export default HomePage;
+      {/* Hero Section */}
+      <section className="bg-gray-50 py-16 text-center">
+        <h1 className="text-4xl font-bold mb-4">We Design Your Dream Space</h1>
+        <p className="text-gray-600 mb-6">Personalized interiors, expert execution, and complete peace of mind</p>
+        <Button className="bg-pink-600 hover:bg-pink-700 text-white px-6 py-2 text-lg rounded-full">Get Free Consultation</Button>
+      </section>
+
+      {/* Service Cards */}
+      <section className="py-12 bg-white">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
+          {["Modular Kitchens", "Wardrobes", "Living Rooms", "Bedrooms", "Full Home Interiors", "Commercial Projects"].map((title, index) => (
+            <Card key={index} className="rounded-2xl shadow-md hover:shadow-xl transition-shadow">
+              <CardContent className="p-6">
+                <div className="text-xl font-semibold mb-2">{title}</div>
+                <p className="text-gray-500">High-quality, personalized {title.toLowerCase()} designed just for you.</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      {/* Footer */}
+      <footer className="bg-gray-100 py-6 mt-16">
+        <div className="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between text-sm text-gray-600">
+          <p>&copy; 2025 Siddhi Architects. All rights reserved.</p>
+          <div className="flex space-x-4">
+            <a href="#" className="hover:underline">Privacy Policy</a>
+            <a href="#" className="hover:underline">Terms of Service</a>
+            <a href="#" className="hover:underline">Contact</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  );
+}
