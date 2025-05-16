@@ -4,10 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Siddhi Architects | Elegant Interiors & Architecture</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
   <style>
-    /* Reset and base */
+    /* Reset & Base */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: 'Poppins', sans-serif;
     }
     body {
@@ -25,208 +28,64 @@
     }
 
     /* Navbar */
-    <!-- Navigation Bar -->
-<nav class="navbar">
-  <div class="container">
-    <a href="#" class="logo">
-      <img src="https://livspace-cdn.s3.ap-south-1.amazonaws.com/web/assets/logo.svg" alt="Livspace Logo" />
-      <span>LIVSPACE</span>
-    </a>
-
-    <ul class="nav-menu">
-      <li><a href="#">Interiors</a></li>
-
-      <li class="dropdown">
-        <a href="#">Design Ideas</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Living Room</a></li>
-          <li><a href="#">Bedroom</a></li>
-          <li><a href="#">Kitchen</a></li>
-        </ul>
-      </li>
-
-      <li class="dropdown">
-        <a href="#">Magazine</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Articles</a></li>
-          <li><a href="#">Trends</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#">Livspace TV</a></li>
-
-      <li class="dropdown">
-        <a href="#">Cities</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">Delhi</a></li>
-          <li><a href="#">Mumbai</a></li>
-          <li><a href="#">Bangalore</a></li>
-        </ul>
-      </li>
-
-      <li><a href="#">Livspace Portfolio</a></li>
-      <li><a href="#">Store Locator</a></li>
-
-      <li class="dropdown">
-        <a href="#">More</a>
-        <ul class="dropdown-menu">
-          <li><a href="#">About Us</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <a href="#" class="profile-icon">
-      <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" alt="User Profile" />
-    </a>
-  </div>
-</nav>
-
-<style>
-  /* Basic Reset */
-  * {
-    margin: 0; padding: 0; box-sizing: border-box;
-  }
-
-  body {
-    font-family: 'Open Sans', Arial, sans-serif;
-  }
-
-  .navbar {
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 10px 20px;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 28px;
-    color: #222;
-    letter-spacing: 2px;
-  }
-
-  .logo img {
-    height: 40px;
-    margin-right: 10px;
-  }
-
-  .nav-menu {
-    list-style: none;
-    display: flex;
-    align-items: center;
-  }
-
-  .nav-menu li {
-    position: relative;
-  }
-
-  .nav-menu > li {
-    margin-left: 30px;
-  }
-
-  .nav-menu a {
-    text-decoration: none;
-    color: #222;
-    font-weight: 600;
-    padding: 10px 6px;
-    transition: color 0.3s, border-bottom 0.3s;
-  }
-
-  .nav-menu a:hover, .nav-menu .dropdown:hover > a {
-    color: #E94E1B;  /* Livspace Orange */
-    border-bottom: 3px solid #E94E1B;
-  }
-
-  .dropdown > a::after {
-    content: " ▼";
-    font-size: 10px;
-  }
-
-  .dropdown-menu {
-    position: absolute;
-    top: 42px;
-    left: 0;
-    background: white;
-    border: 1px solid #ddd;
-    min-width: 160px;
-    display: none;
-    flex-direction: column;
-    z-index: 1000;
-    box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
-  }
-
-  .dropdown-menu li {
-    margin: 0;
-  }
-
-  .dropdown-menu li a {
-    padding: 12px 16px;
-    display: block;
-    color: #444;
-    font-weight: 500;
-  }
-
-  .dropdown-menu li a:hover {
-    background-color: #fef4ef;
-    color: #E94E1B;
-  }
-
-  .dropdown:hover .dropdown-menu {
-    display: flex;
-  }
-
-  .profile-icon img {
-    height: 32px;
-    border-radius: 50%;
-    cursor: pointer;
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      flex-wrap: wrap;
+    .navbar {
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar .logo {
+      display: flex;
+      align-items: center;
+      font-weight: 800;
+      font-size: 24px;
+      color: #222;
+      cursor: pointer;
+    }
+    .navbar .logo img {
+      height: 40px;
+      margin-right: 10px;
     }
     .nav-menu {
-      width: 100%;
-      justify-content: space-around;
-      margin-top: 10px;
-      flex-wrap: wrap;
+      list-style: none;
+      display: flex;
+      gap: 20px;
     }
-    .nav-menu > li {
-      margin-left: 15px;
+    .nav-menu li {
+      position: relative;
     }
-  }
-</style>
+    .nav-menu a {
+      font-weight: 600;
+      color: #222;
+      padding: 10px;
+    }
+    .nav-menu a:hover {
+      color: #E94E1B;
+      border-bottom: 3px solid #E94E1B;
+    }
 
     /* Hero */
     .hero {
       height: 100vh;
       background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
       display: flex;
-      flex-direction: column;
       justify-content: center;
       align-items: center;
-      text-align: center;
       color: white;
-      padding: 0 2rem;
+      text-align: center;
       position: relative;
-      overflow: hidden;
+      padding: 0 2rem;
     }
     .hero::after {
       content: "";
       position: absolute;
       inset: 0;
-      background: rgba(11,29,62,0.6);
+      background: rgba(11, 29, 62, 0.6);
       z-index: 0;
     }
     .hero-content {
@@ -241,13 +100,12 @@
       font-size: 3.5rem;
       font-weight: 900;
       margin-bottom: 1rem;
-      letter-spacing: 2px;
-      text-shadow: 0 0 15px rgba(0,0,0,0.8);
+      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
     }
     .hero p {
       font-size: 1.3rem;
       margin-bottom: 2.5rem;
-      text-shadow: 0 0 10px rgba(0,0,0,0.7);
+      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
     }
     .hero button {
       background: #b98e2a;
@@ -258,7 +116,6 @@
       border: none;
       cursor: pointer;
       font-weight: 700;
-      box-shadow: 0 6px 15px rgba(185,142,42,0.6);
       transition: background 0.3s ease, transform 0.2s ease;
     }
     .hero button:hover {
@@ -278,69 +135,54 @@
       margin-bottom: 3rem;
       font-weight: 800;
       text-align: center;
-      letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     /* Services */
     .services {
       display: flex;
-      justify-content: center;
-      gap: 2.5rem;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
     }
     .service-item {
       background: white;
+      padding: 2rem;
       flex: 1 1 280px;
-      padding: 2.5rem 2rem;
       border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.1);
       text-align: center;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: box-shadow 0.3s ease;
     }
     .service-item:hover {
-      box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
     }
     .service-item img {
-      width: 70px;
-      margin-bottom: 1.25rem;
-      filter: drop-shadow(0 0 2px #b98e2a);
+      width: 64px;
+      margin-bottom: 1rem;
     }
     .service-item h3 {
-      font-weight: 700;
-      margin-bottom: 0.8rem;
       color: #b98e2a;
-      letter-spacing: 1.2px;
-    }
-    .service-item p {
-      color: #555;
-      font-size: 1rem;
-      line-height: 1.5;
+      margin-bottom: 0.5rem;
     }
 
-    /* Portfolio grid */
+    /* Portfolio */
     .portfolio {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 1.5rem;
     }
     .portfolio-item {
       position: relative;
-      border-radius: 12px;
       overflow: hidden;
-      cursor: pointer;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    .portfolio-item:hover {
-      box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     }
     .portfolio-item img {
       width: 100%;
       height: 200px;
       object-fit: cover;
       transition: transform 0.4s ease;
-      display: block;
     }
     .portfolio-item:hover img {
       transform: scale(1.1);
@@ -348,7 +190,7 @@
     .portfolio-overlay {
       position: absolute;
       inset: 0;
-      background: rgba(185,142,42,0.4);
+      background: rgba(185, 142, 42, 0.4);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
@@ -366,61 +208,10 @@
       text-align: center;
     }
 
-    /* Testimonials */
-    .testimonials {
-      max-width: 900px;
-      margin: 0 auto;
-      position: relative;
-      overflow: hidden;
-    }
-    .testimonial-item {
-      background: white;
-      padding: 2rem 2.5rem;
-      border-radius: 15px;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-      margin: 0 1rem;
-      display: none;
-      text-align: center;
-    }
-    .testimonial-item.active {
-      display: block;
-      animation: fadeIn 1s ease forwards;
-    }
-    .testimonial-item p {
-      font-style: italic;
-      color: #666;
-      margin-bottom: 1.25rem;
-      font-size: 1.1rem;
-    }
-    .testimonial-item .author {
-      font-weight: 700;
-      color: #b98e2a;
-      font-size: 1rem;
-    }
-    .testimonial-controls {
-      text-align: center;
-      margin-top: 1.5rem;
-    }
-    .testimonial-controls button {
-      background: #b98e2a;
-      border: none;
-      color: white;
-      padding: 0.6rem 1rem;
-      margin: 0 0.5rem;
-      border-radius: 30px;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background 0.3s ease;
-    }
-    .testimonial-controls button:hover {
-      background: #7a6018;
-    }
-
     /* Contact */
     #contact p {
       text-align: center;
       font-size: 1.15rem;
-      margin-bottom: 0.8rem;
       color: #444;
     }
 
@@ -431,7 +222,6 @@
       text-align: center;
       padding: 1.5rem 2rem;
       font-weight: 600;
-      letter-spacing: 1px;
       font-size: 0.95rem;
       margin-top: 3rem;
     }
@@ -443,163 +233,120 @@
         transform: translateY(0);
       }
     }
-    @keyframes fadeIn {
-      from {opacity: 0;}
-      to {opacity: 1;}
-    }
 
     /* Responsive */
-    @media(max-width: 768px) {
-      header {
-        padding: 1rem 1.5rem;
-      }
+    @media (max-width: 768px) {
       .hero h1 {
         font-size: 2.5rem;
       }
       .hero p {
         font-size: 1rem;
       }
+      .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
       .services {
         flex-direction: column;
-        gap: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
 
-<header id="navbar">
-  <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">Siddhi Architects</div>
-  <nav>
-    <ul>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
+      <img src="logo.png" alt="Siddhi Architects Logo">
+      Siddhi Architects
+    </div>
+    <ul class="nav-menu">
       <li><a href="#services">Services</a></li>
       <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About Us</a></li>
+      <li><a href="#about">About</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-  </nav>
-</header>
+  </header>
 
-<section class="hero">
-  <div class="hero-content">
-    <h1>Designing Dreams, Building Realities</h1>
-    <p>Elegant Interiors & Architectural Excellence</p>
-    <button onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">View Our Work</button>
-  </div>
-</section>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Designing Dreams, Building Realities</h1>
+      <p>Elegant Interiors & Architectural Excellence</p>
+      <button onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">View Our Work</button>
+    </div>
+  </section>
 
-<section id="services">
-  <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-item" tabindex="0">
-      <img src="https://img.icons8.com/dusk/64/000000/room.png" alt="Interior Design Icon" />
-      <h3>Interior Design</h3>
-      <p>Creative interior solutions to transform your space beautifully.</p>
+  <!-- Services -->
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-item">
+        <img src="https://img.icons8.com/dusk/64/000000/room.png" alt="Interior Design">
+        <h3>Interior Design</h3>
+        <p>Creative interior solutions to transform your space beautifully.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://img.icons8.com/dusk/64/000000/architect.png" alt="Architecture">
+        <h3>Architecture</h3>
+        <p>Innovative architectural design for residential and commercial projects.</p>
+      </div>
+      <div class="service-item">
+        <img src="https://img.icons8.com/dusk/64/000000/paint-palette.png" alt="Customization">
+        <h3>Customization</h3>
+        <p>Personalized design and decor tailored to your needs.</p>
+      </div>
     </div>
-    <div class="service-item" tabindex="0">
-      <img src="https://img.icons8.com/dusk/64/000000/architect.png" alt="Architecture Icon" />
-      <h3>Architecture</h3>
-      <p>Innovative architectural design for residential and commercial projects.</p>
-    </div>
-    <div class="service-item" tabindex="0">
-      <img src="https://img.icons8.com/dusk/64/000000/paint-palette.png" alt="Customization Icon" />
-      <h3>Customization</h3>
-      <p>Personalized design and decor tailored to your needs.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="portfolio">
-  <h2>Portfolio</h2>
-  <div class="portfolio">
-    <div class="portfolio-item" tabindex="0">
-      <img src="https://images.unsplash.com/photo-1501183638714-5e3c13766f45?auto=format&fit=crop&w=800&q=80" alt="Modern living room design" />
-      <div class="portfolio-overlay"></div>
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <div class="portfolio">
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1501183638714-5e3c13766f45?auto=format&fit=crop&w=800&q=80" alt="Modern living room">
+        <div class="portfolio-overlay"></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Architectural exterior">
+        <div class="portfolio-overlay"></div>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://images.unsplash.com/photo-1505692794403-4116e0ac64de?auto=format&fit=crop&w=800&q=80" alt="Interior hallway">
+        <div class="portfolio-overlay"></div>
+      </div>
     </div>
-    <div class="portfolio-item" tabindex="0">
-      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Architectural exterior" />
-      <div class="portfolio-overlay"></div>
-    </div>
-    <div class="portfolio-item" tabindex="0">
-      <img src="https://images.unsplash.com/photo-1505692794403-4116e0ac64de?auto=format&fit=crop&w=800&q=80" alt="Interior hallway" />
-      <div class="portfolio-overlay"></div>
-    </div>
-    <div class="portfolio-item" tabindex="0">
-      <img src="https://images.unsplash.com/photo-1472220625704-91e1462799b2?auto=format&fit=crop&w=800&q=80" alt="Contemporary design" />
-      <div class="portfolio-overlay"></div>
-    </div>
-  </div>
-</section>
+  </section>
 
-<section id="about">
-  <h2>About Siddhi Architects</h2>
-  <p>
-    Siddhi Architects specializes in delivering elegant and functional interior and architectural designs that bring your dream spaces to life. Our team of experts focuses on creativity, quality, and client satisfaction.
-  </p>
-</section>
+  <!-- About -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>
+      Siddhi Architects blends creativity and functionality to deliver remarkable architecture and interior spaces. With years of experience and a passion for excellence, we craft personalized environments that reflect elegance, comfort, and style.
+    </p>
+  </section>
 
-<section id="testimonials" class="section">
-  <h2>What Our Clients Say</h2>
-  <div class="testimonials">
-    <div class="testimonial-item active">
-      <p>"Siddhi Architects transformed my home into a masterpiece. Truly professional and attentive to every detail!"</p>
-      <div class="author">— Priya Sharma</div>
-    </div>
-    <div class="testimonial-item">
-      <p>"Highly recommend Siddhi Architects for anyone looking for modern and elegant design solutions."</p>
-      <div class="author">— Rohit Verma</div>
-    </div>
-    <div class="testimonial-item">
-      <p>"Great experience working with the team. They listened to our needs and created a beautiful space."</p>
-      <div class="author">— Anjali Mehta</div>
-    </div>
-  </div>
-  <div class="testimonial-controls">
-    <button onclick="prevTestimonial()">Prev</button>
-    <button onclick="nextTestimonial()">Next</button>
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: contact@siddhiarchitects2025@gmail.com | Phone: +91-8247312188</p>
+    <p>Follow us on social media to explore our latest works and ideas.</p>
+  </section>
 
-<section id="contact">
-  <h2>Contact Us</h2>
-  <p>Phone: +91 12345 67890</p>
-  <p>Email: contact@siddhiarchitects.com</p>
-  <p>Address: 123, Architecture Lane, Your City, India</p>
-</section>
-
+  <!-- Footer -->
+  <!-- Footer -->
 <footer>
-  &copy; 2025 Siddhi Architects. All rights reserved.  
+  <div style="margin-bottom: 10px;">
+    <a href="https://www.instagram.com/siddhi_architects" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/b98e2a/instagram-new.png" alt="Instagram" style="margin: 0 10px;">
+    </a>
+    <a href="https://www.youtube.com/@siddhi_architects" target="_blank">
+      <img src="https://img.icons8.com/ios-filled/30/b98e2a/youtube-play.png" alt="YouTube" style="margin: 0 10px;">
+    </a>
+  </div>
+  © 2025 Siddhi Architects. All rights reserved.
 </footer>
 
-<script>
-  // Navbar color on scroll
-  window.addEventListener('scroll', () => {
-    const nav = document.getElementById('navbar');
-    if(window.scrollY > 50){
-      nav.classList.add('scrolled');
-    } else {
-      nav.classList.remove('scrolled');
-    }
-  });
-
-  // Testimonials slider logic
-  let currentTestimonial = 0;
-  const testimonials = document.querySelectorAll('.testimonial-item');
-
-  function showTestimonial(index) {
-    testimonials.forEach((t, i) => {
-      t.classList.toggle('active', i === index);
-    });
-  }
-  function nextTestimonial() {
-    currentTestimonial = (currentTestimonial + 1) % testimonials.length;
-    showTestimonial(currentTestimonial);
-  }
-  function prevTestimonial() {
-    currentTestimonial = (currentTestimonial - 1 + testimonials.length) % testimonials.length;
-    showTestimonial(currentTestimonial);
-  }
-</script>
 
 </body>
 </html>
