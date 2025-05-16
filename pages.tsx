@@ -12,17 +12,9 @@ export default function HomePage() {
           <nav className="space-x-6 text-sm font-medium hidden md:flex">
             <div className="group relative">
               <span className="cursor-pointer">Interiors</span>
-              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden group-hover:block z-50">
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Modular Kitchens</a>
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Living Rooms</a>
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Bedrooms</a>
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wardrobes</a>
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Study Rooms</a>
-                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Kids Rooms</a>
-              </div>
             </div>
             <div className="group relative">
-              <span className="cursor-pointer text-pink-500">Design Ideas</span>
+              <span className="cursor-pointer text-pink-500">Design Ideas &#x25BE;</span>
               <div className="absolute left-0 mt-2 w-56 bg-white border rounded shadow-lg hidden group-hover:block z-50">
                 <a className="block px-4 py-2 hover:bg-gray-100" href="#">Modular Kitchen Designs</a>
                 <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wardrobe Designs</a>
@@ -35,19 +27,43 @@ export default function HomePage() {
               </div>
             </div>
             <div className="group relative">
-              <span className="cursor-pointer">Magazine</span>
+              <span className="cursor-pointer">Magazine &#x25BE;</span>
+              <div className="absolute left-0 mt-2 w-64 bg-white border rounded shadow-lg hidden group-hover:block z-50 grid grid-cols-2 gap-2 p-2">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Room Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Organisation</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Decor & Inspiration</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Materials Guide</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Ceiling Design</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Renovation Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Furniture Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Home Decor</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Lighting Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Wall Design Ideas</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Expert Advice</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Interior Advice</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Vastu Tips</a>
+              </div>
             </div>
             <div className="group relative">
               <span className="cursor-pointer">SiddhiArchitects TV</span>
             </div>
             <div className="group relative">
-              <span className="cursor-pointer">Cities</span>
+              <span className="cursor-pointer">Cities &#x25BE;</span>
+              <div className="absolute left-0 mt-2 w-48 bg-white border rounded shadow-lg hidden group-hover:block z-50">
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Vijayawada</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Guntur</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Chirala</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Nellore</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Kadapa</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Hyderabad</a>
+                <a className="block px-4 py-2 hover:bg-gray-100" href="#">Bangalore</a>
+              </div>
             </div>
             <div className="group relative">
               <span className="cursor-pointer">Siddhi Portfolio</span>
             </div>
             <div className="group relative">
-              <span className="cursor-pointer">More</span>
+              <span className="cursor-pointer">More &#x25BE;</span>
             </div>
           </nav>
         </div>
