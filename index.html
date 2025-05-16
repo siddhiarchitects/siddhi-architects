@@ -3,350 +3,112 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Siddhi Architects | Elegant Interiors & Architecture</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <title>Siddhi Architects</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
   <style>
-    /* Reset & Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
     body {
-      background: #f7f6f3;
-      color: #222;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: #b98e2a;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #7a6018;
-    }
-
-    /* Navbar */
-    .navbar {
-      background-color: #fff;
-      border-bottom: 1px solid #ddd;
-      padding: 10px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .navbar .logo {
-      display: flex;
-      align-items: center;
-      font-weight: 800;
-      font-size: 24px;
-      color: #222;
-      cursor: pointer;
-    }
-    .navbar .logo img {
-      height: 40px;
-      margin-right: 10px;
-    }
-    .nav-menu {
-      list-style: none;
-      display: flex;
-      gap: 20px;
-    }
-    .nav-menu li {
-      position: relative;
-    }
-    .nav-menu a {
-      font-weight: 600;
-      color: #222;
-      padding: 10px;
-    }
-    .nav-menu a:hover {
-      color: #E94E1B;
-      border-bottom: 3px solid #E94E1B;
-    }
-
-    /* Hero */
-    .hero {
-      height: 100vh;
-      background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
-      text-align: center;
-      position: relative;
-      padding: 0 2rem;
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(11, 29, 62, 0.6);
-      z-index: 0;
-    }
-    .hero-content {
-      position: relative;
-      z-index: 1;
-      max-width: 700px;
-      animation: fadeInUp 1.5s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    .hero h1 {
-      font-size: 3.5rem;
-      font-weight: 900;
-      margin-bottom: 1rem;
-      text-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
-    }
-    .hero p {
-      font-size: 1.3rem;
-      margin-bottom: 2.5rem;
-      text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
-    }
-    .hero button {
-      background: #b98e2a;
-      color: white;
-      padding: 1rem 3rem;
-      font-size: 1.1rem;
-      border-radius: 30px;
-      border: none;
-      cursor: pointer;
-      font-weight: 700;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-    .hero button:hover {
-      background: #7a6018;
-      transform: scale(1.05);
-    }
-
-    /* Sections */
-    section {
-      padding: 5rem 2rem 3rem 2rem;
-      max-width: 1200px;
-      margin: auto;
-    }
-    section h2 {
-      font-size: 2.8rem;
-      color: #0b1d3e;
-      margin-bottom: 3rem;
-      font-weight: 800;
-      text-align: center;
-      text-transform: uppercase;
-    }
-
-    /* Services */
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-    .service-item {
-      background: white;
-      padding: 2rem;
-      flex: 1 1 280px;
-      border-radius: 15px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    .service-item:hover {
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.18);
-    }
-    .service-item img {
-      width: 64px;
-      margin-bottom: 1rem;
-    }
-    .service-item h3 {
-      color: #b98e2a;
-      margin-bottom: 0.5rem;
-    }
-
-    /* Portfolio */
-    .portfolio {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    .portfolio-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 12px;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    }
-    .portfolio-item img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      transition: transform 0.4s ease;
-    }
-    .portfolio-item:hover img {
-      transform: scale(1.1);
-    }
-    .portfolio-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(185, 142, 42, 0.4);
-      opacity: 0;
-      transition: opacity 0.3s ease;
-    }
-    .portfolio-item:hover .portfolio-overlay {
-      opacity: 1;
-    }
-
-    /* About */
-    #about p {
-      max-width: 800px;
-      margin: auto;
-      font-size: 1.15rem;
-      color: #555;
-      line-height: 1.7;
-      text-align: center;
-    }
-
-    /* Contact */
-    #contact p {
-      text-align: center;
-      font-size: 1.15rem;
-      color: #444;
-    }
-
-    /* Footer */
-    footer {
-      background: #0b1d3e;
-      color: #b98e2a;
-      text-align: center;
-      padding: 1.5rem 2rem;
-      font-weight: 600;
-      font-size: 0.95rem;
-      margin-top: 3rem;
-    }
-
-    /* Animations */
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .hero h1 {
-        font-size: 2.5rem;
-      }
-      .hero p {
-        font-size: 1rem;
-      }
-      .nav-menu {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-      .services {
-        flex-direction: column;
-      }
+      font-family: "Inter", sans-serif;
     }
   </style>
 </head>
-<body>
+<body class="bg-white text-gray-900 relative">
+  <!-- Cookie Banner -->
+  <div class="bg-[#5a3e59] text-white text-sm px-4 py-2 flex justify-center items-center gap-1">
+    <span>Our website uses cookies.</span>
+    <a href="#" class="text-[#f87171] font-semibold hover:underline">Learn more &gt;</a>
+  </div>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo" onclick="window.scrollTo({top:0, behavior:'smooth'})">
-      <img src="logo.png" alt="Siddhi Architects Logo">
-      Siddhi Architects
+  <!-- Header -->
+  <header class="border-b border-gray-200">
+    <div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-3">
+      <div class="flex items-center space-x-6">
+        <a href="#" class="flex items-center space-x-2">
+          <img src="logo.png" alt="Siddhi Architects Logo" class="w-8 h-8" />
+          <span class="font-semibold text-lg tracking-wide">SIDDHI ARCHITECTS</span>
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-800">
+          <a href="#" class="hover:text-gray-900">Interiors</a>
+          <a href="#" class="hover:text-gray-900">Portfolio</a>
+          <a href="#" class="hover:text-gray-900">Store Locator</a>
+          <a href="#" class="hover:text-gray-900">Contact</a>
+        </nav>
+      </div>
+      <div class="hidden md:flex items-center">
+        <button aria-label="User account" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+          <i class="fas fa-user-circle fa-lg"></i>
+        </button>
+      </div>
     </div>
-    <ul class="nav-menu">
-      <li><a href="#services">Services</a></li>
-      <li><a href="#portfolio">Portfolio</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+
+    <!-- Secondary nav -->
+    <div class="border-t border-gray-200">
+      <div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-2 text-xs text-gray-700 font-medium">
+        <nav class="flex items-center space-x-6">
+          <div class="relative group">
+            <button class="flex items-center gap-1 hover:text-gray-900 focus:outline-none">
+              Locations
+              <i class="fas fa-chevron-down text-[10px]"></i>
+            </button>
+            <div class="absolute left-0 top-full mt-1 bg-white border border-gray-200 rounded shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-20 min-w-[140px]">
+              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Andhra Pradesh</a>
+              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Hyderabad</a>
+              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Bangalore</a>
+              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Chennai</a>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Designing Dreams, Building Realities</h1>
-      <p>Elegant Interiors & Architectural Excellence</p>
-      <button onclick="document.querySelector('#portfolio').scrollIntoView({behavior:'smooth'})">View Our Work</button>
-    </div>
-  </section>
-
-  <!-- Services -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-item">
-        <img src="https://img.icons8.com/dusk/64/000000/room.png" alt="Interior Design">
-        <h3>Interior Design</h3>
-        <p>Creative interior solutions to transform your space beautifully.</p>
-      </div>
-      <div class="service-item">
-        <img src="https://img.icons8.com/dusk/64/000000/architect.png" alt="Architecture">
-        <h3>Architecture</h3>
-        <p>Innovative architectural design for residential and commercial projects.</p>
-      </div>
-      <div class="service-item">
-        <img src="https://img.icons8.com/dusk/64/000000/paint-palette.png" alt="Customization">
-        <h3>Customization</h3>
-        <p>Personalized design and decor tailored to your needs.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio">
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1501183638714-5e3c13766f45?auto=format&fit=crop&w=800&q=80" alt="Modern living room">
-        <div class="portfolio-overlay"></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Architectural exterior">
-        <div class="portfolio-overlay"></div>
-      </div>
-      <div class="portfolio-item">
-        <img src="https://images.unsplash.com/photo-1505692794403-4116e0ac64de?auto=format&fit=crop&w=800&q=80" alt="Interior hallway">
-        <div class="portfolio-overlay"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      Siddhi Architects blends creativity and functionality to deliver remarkable architecture and interior spaces. With years of experience and a passion for excellence, we craft personalized environments that reflect elegance, comfort, and style.
-    </p>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: contact@siddhiarchitects2025@gmail.com | Phone: +91-8247312188</p>
-    <p>Follow us on social media to explore our latest works and ideas.</p>
-  </section>
-
-  <!-- Footer -->
-  <!-- Footer -->
-<footer>
-  <div style="margin-bottom: 10px;">
-    <a href="https://www.instagram.com/siddhi_architects" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/30/b98e2a/instagram-new.png" alt="Instagram" style="margin: 0 10px;">
-    </a>
-    <a href="https://www.youtube.com/@siddhi_architects" target="_blank">
-      <img src="https://img.icons8.com/ios-filled/30/b98e2a/youtube-play.png" alt="YouTube" style="margin: 0 10px;">
-    </a>
+  <!-- Hero Image -->
+  <div class="relative max-w-[1280px] mx-auto">
+    <img
+      src="https://placehold.co/1280x480/png?text=Siddhi+Architects+Showcase"
+      alt="Beautiful modern interiors by Siddhi Architects"
+      class="w-full object-cover"
+      width="1280"
+      height="480"
+    />
+    <h1 class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-lg">
+      Home to Beautiful Interiors
+    </h1>
   </div>
-  © 2025 Siddhi Architects. All rights reserved.
-</footer>
 
+  <!-- WhatsApp floating button -->
+  <a href="#" aria-label="WhatsApp chat" class="fixed right-0 top-1/2 -translate-y-1/2 bg-white border border-gray-300 rounded-l-full p-3 shadow-lg hover:shadow-xl transition-shadow" style="z-index: 1000">
+    <img src="https://placehold.co/32x32/png?text=WA" alt="WhatsApp icon" class="w-8 h-8" />
+  </a>
 
+  <!-- Chat bubble bottom right -->
+  <div class="fixed bottom-6 right-6 flex flex-col items-end space-y-2 z-[1000]">
+    <div class="bg-white border border-gray-300 rounded-md px-3 py-2 text-xs text-gray-800 shadow-md relative max-w-xs">
+      How can I help you today?
+      <button aria-label="Close chat" class="absolute top-1 right-1 text-gray-500 hover:text-gray-700 focus:outline-none">
+        <i class="fas fa-times text-xs"></i>
+      </button>
+    </div>
+    <button aria-label="Open chat" class="bg-[#f87171] p-3 rounded-full shadow-lg hover:bg-[#f87171cc] focus:outline-none">
+      <i class="fas fa-comment-alt text-white"></i>
+    </button>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-gray-100 text-center text-sm py-6 mt-12 border-t">
+    <div class="mb-3">
+      <a href="https://www.instagram.com/your_instagram" target="_blank" class="inline-block mx-2">
+        <img src="https://img.icons8.com/ios-filled/30/b98e2a/instagram-new.png" alt="Instagram">
+      </a>
+      <a href="https://www.youtube.com/@your_youtube" target="_blank" class="inline-block mx-2">
+        <img src="https://img.icons8.com/ios-filled/30/b98e2a/youtube-play.png" alt="YouTube">
+      </a>
+    </div>
+    <p>© 2025 Siddhi Architects. All rights reserved.</p>
+    <p>Serving locations: Andhra Pradesh, Hyderabad, Bangalore, Chennai</p>
+    <p>Contact: info@siddhiarchitects.com | +91 98765 43210</p>
+  </footer>
 </body>
 </html>
