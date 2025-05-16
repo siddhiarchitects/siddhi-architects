@@ -2,113 +2,101 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Siddhi Architects</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <style>
-    body {
-      font-family: "Inter", sans-serif;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
-<body class="bg-white text-gray-900 relative">
-  <!-- Cookie Banner -->
-  <div class="bg-[#5a3e59] text-white text-sm px-4 py-2 flex justify-center items-center gap-1">
-    <span>Our website uses cookies.</span>
-    <a href="#" class="text-[#f87171] font-semibold hover:underline">Learn more &gt;</a>
-  </div>
-
+<body>
   <!-- Header -->
-  <header class="border-b border-gray-200">
-    <div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-3">
-      <div class="flex items-center space-x-6">
-        <a href="#" class="flex items-center space-x-2">
-          <img src="logo.png" alt="Siddhi Architects Logo" class="w-8 h-8" />
-          <span class="font-semibold text-lg tracking-wide">SIDDHI ARCHITECTS</span>
-        </a>
-
-        <nav class="hidden md:flex items-center space-x-6 text-sm font-medium text-gray-800">
-          <a href="#" class="hover:text-gray-900">Interiors</a>
-          <a href="#" class="hover:text-gray-900">Portfolio</a>
-          <a href="#" class="hover:text-gray-900">Store Locator</a>
-          <a href="#" class="hover:text-gray-900">Contact</a>
-        </nav>
-      </div>
-      <div class="hidden md:flex items-center">
-        <button aria-label="User account" class="text-gray-600 hover:text-gray-900 focus:outline-none">
-          <i class="fas fa-user-circle fa-lg"></i>
-        </button>
-      </div>
-    </div>
-
-    <!-- Secondary nav -->
-    <div class="border-t border-gray-200">
-      <div class="max-w-[1280px] mx-auto flex items-center justify-between px-4 py-2 text-xs text-gray-700 font-medium">
-        <nav class="flex items-center space-x-6">
-          <div class="relative group">
-            <button class="flex items-center gap-1 hover:text-gray-900 focus:outline-none">
-              Locations
-              <i class="fas fa-chevron-down text-[10px]"></i>
-            </button>
-            <div class="absolute left-0 top-full mt-1 bg-white border border-gray-200 rounded shadow-md opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity z-20 min-w-[140px]">
-              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Andhra Pradesh</a>
-              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Hyderabad</a>
-              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Bangalore</a>
-              <a href="#" class="block px-3 py-1.5 text-gray-700 hover:bg-gray-100 text-xs">Chennai</a>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </div>
+  <header class="header">
+    <div class="logo">Siddhi Architects</div>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#interiors">Interiors</a></li>
+        <li><a href="#architecture">Architecture</a></li>
+        <li><a href="#design-ideas">Design Ideas</a></li>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#process">Our Process</a></li>
+        <li><a href="#cities">Cities We Serve</a></li>
+        <li class="dropdown">
+          <a href="#">More</a>
+          <ul class="dropdown-menu">
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#careers">Careers</a></li>
+            <li><a href="#media">Media</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a class="cta-btn" href="#consult">Book Your Free Consultation</a>
   </header>
 
-  <!-- Hero Image -->
-  <div class="relative max-w-[1280px] mx-auto">
-    <img
-      src="https://placehold.co/1280x480/png?text=Siddhi+Architects+Showcase"
-      alt="Beautiful modern interiors by Siddhi Architects"
-      class="w-full object-cover"
-      width="1280"
-      height="480"
-    />
-    <h1 class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-3xl sm:text-4xl md:text-5xl font-extrabold drop-shadow-lg">
-      Home to Beautiful Interiors
-    </h1>
-  </div>
-
-  <!-- WhatsApp floating button -->
-  <a href="#" aria-label="WhatsApp chat" class="fixed right-0 top-1/2 -translate-y-1/2 bg-white border border-gray-300 rounded-l-full p-3 shadow-lg hover:shadow-xl transition-shadow" style="z-index: 1000">
-    <img src="https://placehold.co/32x32/png?text=WA" alt="WhatsApp icon" class="w-8 h-8" />
-  </a>
-
-  <!-- Chat bubble bottom right -->
-  <div class="fixed bottom-6 right-6 flex flex-col items-end space-y-2 z-[1000]">
-    <div class="bg-white border border-gray-300 rounded-md px-3 py-2 text-xs text-gray-800 shadow-md relative max-w-xs">
-      How can I help you today?
-      <button aria-label="Close chat" class="absolute top-1 right-1 text-gray-500 hover:text-gray-700 focus:outline-none">
-        <i class="fas fa-times text-xs"></i>
-      </button>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Home to Beautiful Interiors</h1>
+      <p>Transforming Spaces, Enriching Lives</p>
+      <a href="#portfolio" class="cta-btn">Explore Our Work</a>
     </div>
-    <button aria-label="Open chat" class="bg-[#f87171] p-3 rounded-full shadow-lg hover:bg-[#f87171cc] focus:outline-none">
-      <i class="fas fa-comment-alt text-white"></i>
-    </button>
-  </div>
+  </section>
+
+  <!-- Main Sections Placeholder -->
+  <section id="how-it-works">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Consultation</li>
+      <li>Concept Design</li>
+      <li>3D Visualization</li>
+      <li>Execution</li>
+      <li>Handover</li>
+    </ol>
+  </section>
+
+  <section id="offerings">
+    <h2>What We Offer</h2>
+    <div class="offer-grid">
+      <div>Residential Interiors</div>
+      <div>Commercial Interiors</div>
+      <div>Architecture Services</div>
+      <div>Renovation & Makeovers</div>
+      <div>Vastu Consultation</div>
+    </div>
+  </section>
+
+  <section id="cities">
+    <h2>Cities We Serve</h2>
+    <ul>
+      <li>Andhra Pradesh</li>
+      <li>Hyderabad</li>
+      <li>Bangalore</li>
+      <li>Chennai</li>
+    </ul>
+  </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-100 text-center text-sm py-6 mt-12 border-t">
-    <div class="mb-3">
-      <a href="https://www.instagram.com/your_instagram" target="_blank" class="inline-block mx-2">
-        <img src="https://img.icons8.com/ios-filled/30/b98e2a/instagram-new.png" alt="Instagram">
-      </a>
-      <a href="https://www.youtube.com/@your_youtube" target="_blank" class="inline-block mx-2">
-        <img src="https://img.icons8.com/ios-filled/30/b98e2a/youtube-play.png" alt="YouTube">
-      </a>
+  <footer class="footer">
+    <div class="footer-about">
+      <h3>About Siddhi Architects</h3>
+      <p>We deliver personalized architecture and interior design solutions for residential and commercial spaces.</p>
     </div>
-    <p>© 2025 Siddhi Architects. All rights reserved.</p>
-    <p>Serving locations: Andhra Pradesh, Hyderabad, Bangalore, Chennai</p>
-    <p>Contact: siddhiarchitects2025@gmail.com | +91 8247312188</p>
+    <div class="footer-links">
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms & Conditions</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-social">
+      <a href="#"><img src="icons/facebook.svg" alt="Facebook" /></a>
+      <a href="#"><img src="icons/instagram.svg" alt="Instagram" /></a>
+      <a href="#"><img src="icons/youtube.svg" alt="YouTube" /></a>
+    </div>
   </footer>
 </body>
 </html>
