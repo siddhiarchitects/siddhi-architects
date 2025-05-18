@@ -16,33 +16,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
 
-    /* Dropdown CSS for click behavior */
-.dropdown {
-  position: relative;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: white;
-  border: 1px solid #ddd;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  z-index: 1000;
-  min-width: 180px;
-}
-.dropdown-content a {
-  display: block;
-  padding: 10px 15px;
-  text-decoration: none;
-  color: #333;
-}
-.dropdown-content a:hover {
-  background-color: #f5f5f5;
-}
-.dropdown-content.show {
-  display: block;
-}
-
-    
     .top-bar {
       background-color: #1e3556;
       color: white;
@@ -130,15 +103,48 @@
       align-items: center;
       gap: 25px;
       font-weight: 500;
+      position: relative;
     }
     nav a {
       color: #333;
       text-decoration: none;
       padding: 8px 10px;
       transition: color 0.3s;
+      cursor: pointer;
     }
     nav a:hover {
       color: #b30000;
+    }
+
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      border: 1px solid #ddd;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+      min-width: 180px;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 15px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f5f5f5;
+    }
+
+    .dropdown-content.show {
+      display: block;
     }
 
     .hero {
@@ -256,34 +262,35 @@
     <nav>
       <a href="#">Home</a>
       <a href="#portfolio">Siddhi Portfolio</a>
+
       <div class="dropdown">
-  <a href="javascript:void(0);" onclick="toggleDropdown('servicesDropdown')">Services ▾</a>
-  <div class="dropdown-content" id="servicesDropdown">
-    <a href="#services-home">Home & Villa</a>
-    <a href="#services-apartments">Apartments</a>
-    <a href="#services-commercial">Commercial</a>
-    <a href="#services-hospitals">Hospital Care</a>
-    <a href="#services-halls">Convention Halls</a>
-    <a href="#services-custom">Custom Interiors</a>
-    <a href="#services-temples">Temple Designs</a>
-  </div>
-  </div>
+        <a onclick="toggleDropdown('servicesDropdown')">Services ▾</a>
+        <div class="dropdown-content" id="servicesDropdown">
+          <a href="#services-home">Home & Villa</a>
+          <a href="#services-apartments">Apartments</a>
+          <a href="#services-commercial">Commercial</a>
+          <a href="#services-hospitals">Hospital Care</a>
+          <a href="#services-halls">Convention Halls</a>
+          <a href="#services-custom">Custom Interiors</a>
+          <a href="#services-temples">Temple Designs</a>
+        </div>
+      </div>
+
       <a href="#siddhitv">Siddhi TV</a>
       <a href="#contact">Contact Us</a>
       <a href="#about">About Us</a>
+
       <div class="dropdown">
-        <a href="#">Cities ▾</a>
-        <div class="dropdown">
-  <a href="javascript:void(0);" onclick="toggleDropdown('citiesDropdown')">Cities ▾</a>
-  <div class="dropdown-content" id="citiesDropdown">
-    <a href="#city1">Vijayawada</a>
-    <a href="#city2">Guntur</a>
-    <a href="#city3">Chirala</a>
-    <a href="#city4">Nellore</a>
-    <a href="#city5">Hyderabad</a>
-    <a href="#city6">Chennai</a>
-  </div>
-  </div>
+        <a onclick="toggleDropdown('citiesDropdown')">Cities ▾</a>
+        <div class="dropdown-content" id="citiesDropdown">
+          <a href="#city1">Vijayawada</a>
+          <a href="#city2">Guntur</a>
+          <a href="#city3">Chirala</a>
+          <a href="#city4">Nellore</a>
+          <a href="#city5">Hyderabad</a>
+          <a href="#city6">Chennai</a>
+        </div>
+      </div>
     </nav>
   </header>
   
@@ -324,27 +331,21 @@
       currentIndex = (currentIndex - 1 + sections.length) % sections.length;
       updateSection();
     }
-  </script>
 
-  <script>
-  function toggleDropdown(id) {
-    const dropdown = document.getElementById(id);
-    const allDropdowns = document.querySelectorAll('.dropdown-content');
-    allDropdowns.forEach(el => {
-      if (el.id !== id) {
-        el.classList.remove('show');
+    function toggleDropdown(id) {
+      const dropdown = document.getElementById(id);
+      const allDropdowns = document.querySelectorAll('.dropdown-content');
+      allDropdowns.forEach(el => {
+        if (el.id !== id) el.classList.remove('show');
+      });
+      dropdown.classList.toggle('show');
+    }
+
+    window.addEventListener('click', function(e) {
+      if (!e.target.closest('.dropdown')) {
+        document.querySelectorAll('.dropdown-content').forEach(el => el.classList.remove('show'));
       }
     });
-    dropdown.classList.toggle('show');
-  }
-
-  // Close dropdowns when clicking outside
-  window.addEventListener('click', function(e) {
-    if (!e.target.matches('.dropdown > a')) {
-      document.querySelectorAll('.dropdown-content').forEach(el => el.classList.remove('show'));
-    }
-  });
-</script>
-
+  </script>
 </body>
 </html>
