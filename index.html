@@ -8,13 +8,13 @@
   <meta property="og:description" content="Elegant and functional designs for residential, commercial, and hospital spaces." />
   <meta property="og:image" content="https://yoursite.com/preview-image.jpg" />
   <meta property="og:url" content="https://yoursite.com/" />
-  <title>Siddhi Architects | Home</title> 
+  <title>Siddhi Architects | Home</title>
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
 
     .top-bar {
       background-color: #1e3556;
@@ -54,6 +54,11 @@
       background-color: white;
       padding: 6px;
       display: inline-block;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     .top-bar .social-icons a .fa-facebook-f { color: #3b5998; }
     .top-bar .social-icons a .fa-linkedin-in { color: #0077b5; }
@@ -107,29 +112,6 @@
     nav a:hover {
       color: #b30000;
     }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: #333;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover {
-      background-color: #f2f2f2;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
 
     .hero {
       height: 90vh;
@@ -179,57 +161,16 @@
         margin-left: 0;
         justify-content: center;
       }
-      .footer-container {
-        flex-direction: column;
-        align-items: center;
-      }
-      .footer-logo, .footer-links, .footer-contact {
-        text-align: center;
-      }
-    }
-    .form-popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      border: 2px solid #ccc;
-      padding: 20px;
-      z-index: 1000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    }
-    .form-popup input, .form-popup select {
-      width: 100%;
-      padding: 8px;
-      margin: 10px 0;
-    }
-    .form-popup button {
-      padding: 8px 15px;
-      background-color: #1e3556;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-    .form-popup .close {
-      background-color: #ccc;
-      margin-left: 10px;
     }
   </style>
-  <script>
-    function toggleCalculator() {
-      const form = document.getElementById('priceForm');
-      form.style.display = form.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </head>
 <body>
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
       <span><i class="fas fa-phone"></i> +91-82473-12188</span>
-      <a href="#" onclick="toggleCalculator()">Price Calculator</a>
-      <a href="customer-login.html">Customer Login</a>
+      <a href="#" onclick="alert('Price Calculator Form Coming Soon!')">Price Calculator</a>
+      <a href="#">Customer Login</a>
     </div>
     <div class="right">
       <div class="social-icons">
@@ -248,77 +189,19 @@
       <div class="logo-text">
         <h1>SIDDHI ARCHITECTS</h1>
         <div class="logo-subtitle">Interior | Architecture</div>
-        <div class="hero">
-        <h1>Your Dream Space, Designed to Perfection</h1>
       </div>
     </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#portfolio">Siddhi Portfolio</a>
-      <div class="dropdown">
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="#services-home">Home & Villa</a>
-          <a href="#services-apartments">Apartments</a>
-          <a href="#services-commercial">Commercial</a>
-          <a href="#services-hospitals">Hospital Care</a>
-          <a href="#services-halls">Convention Halls</a>
-          <a href="#services-custom">Custom Interiors</a>
-          <a href="#services-temples">Temple Designs</a>
-        </div>
-      </div>
-      <a href="#siddhitv">Siddhi TV</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#about">About Us</a>
-      <div class="dropdown">
-        <a href="#">Cities ▾</a>
-        <div class="dropdown-content">
-          <a href="#city1">Vijayawada</a>
-          <a href="#city2">Guntur</a>
-          <a href="#city3">Chirala</a>
-          <a href="#city4">Nellore</a>
-          <a href="#city5">Hyderabad</a>
-          <a href="#city6">Chennai</a>
-        </div>
-      </div>
+      <a href="#">Portfolio</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
     </nav>
   </header>
 
   <div class="hero">
-    <h1>Designing Spaces That Heal, Inspire & Function Beautifully</h1>
+    <h1>Your Dream Space, Designed to Perfection</h1>
     <a href="#contact" class="cta-button">Get in Touch</a>
-  </div>
-
-  <div id="priceForm" class="form-popup">
-    <h2>Price Calculator</h2>
-    <form>
-      <label for="projectType">Project Type:</label>
-      <select id="projectType" name="projectType">
-        <option value="villa">Villa</option>
-        <option value="apartment">Apartment</option>
-        <option value="commercial">Commercial</option>
-        <option value="hospital">Hospital</option>
-        <option value="convention">Convention Hall</option>
-      </select>
-
-      <label for="area">Total Area (sq.ft):</label>
-      <input type="number" id="area" name="area" required>
-
-      <label for="budget">Estimated Budget (₹):</label>
-      <input type="number" id="budget" name="budget">
-
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <button type="submit">Submit</button>
-      <button type="button" class="close" onclick="toggleCalculator()">Close</button>
-    </form>
   </div>
 </body>
 </html>
