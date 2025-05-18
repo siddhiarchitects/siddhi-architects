@@ -3,218 +3,278 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Siddhi Architects</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
+  <title>Siddhi Architects | Home</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
-    body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-    }
-    header {
-      background: white;
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+
+    .top-bar {
+      background-color: #1e3556;
+      color: white;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 30px;
-      border-bottom: 1px solid #ddd;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
+      padding: 10px 30px;
+      font-size: 14px;
+      flex-wrap: wrap;
     }
-    .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #d32f2f;
-    }
-    nav ul {
-      list-style: none;
+    .top-bar .left {
       display: flex;
-      gap: 25px;
-      margin: 0;
-      padding: 0;
+      align-items: center;
+      gap: 20px;
     }
-    nav ul li {
-      position: relative;
+    .top-bar .left i {
+      margin-right: 5px;
     }
-    nav ul li a {
+    .top-bar .right {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+    .top-bar .right a {
+      color: white;
       text-decoration: none;
-      color: #333;
-      font-weight: 500;
+      padding: 6px 12px;
+      background: #f4803c;
+      border-radius: 4px;
     }
-    nav ul li ul {
+    .top-bar .social-icons i {
+      margin-left: 10px;
+      cursor: pointer;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      background: #fff;
+      padding: 10px 30px;
+      border-bottom: 2px solid #ddd;
+    }
+    header img {
+      height: 50px;
+      margin-right: 15px;
+    }
+    header h1 {
+      font-size: 1.8rem;
+      color: #222;
+      margin-right: auto;
+    }
+    nav {
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 15px 10px;
+      border-bottom: 2px solid #eee;
+      font-weight: bold;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      padding: 8px 15px;
+      border-radius: 4px;
+      transition: background 0.3s, color 0.3s;
+    }
+    nav a:hover {
+      background: #b30000;
+      color: #fff;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
       display: none;
       position: absolute;
-      background: white;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      padding: 10px;
-      top: 30px;
-      left: 0;
-      z-index: 1000;
+      background-color: #fff;
+      min-width: 200px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+      z-index: 1;
     }
-    nav ul li:hover ul {
+    .dropdown-content a {
+      color: #333;
+      padding: 10px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f2f2f2;
+    }
+    .dropdown:hover .dropdown-content {
       display: block;
     }
     .hero {
-      background: url('https://source.unsplash.com/1600x800/?interior-design') no-repeat center center/cover;
       height: 90vh;
+      background: url('hero-image.jpg') center/cover no-repeat;
       display: flex;
-      align-items: center;
       justify-content: center;
-      color: white;
+      align-items: center;
       text-align: center;
-      padding: 20px;
+      color: #fff;
     }
     .hero h1 {
-      font-size: 48px;
-      max-width: 700px;
+      background: rgba(0,0,0,0.6);
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 3rem;
     }
-    .section {
-      padding: 60px 30px;
+    section {
+      padding: 60px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.5rem;
+      color: #b30000;
+      margin-bottom: 30px;
       text-align: center;
     }
-    .section h2 {
-      font-size: 36px;
-      margin-bottom: 20px;
-    }
-    .cards {
+    .features, .gallery, .testimonials, .contact-form {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
     .card {
+      background: #fff;
       border-radius: 10px;
-      overflow: hidden;
       box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      background: white;
+      overflow: hidden;
       transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: scale(1.03);
     }
     .card img {
       width: 100%;
       height: 200px;
       object-fit: cover;
     }
-    .card h3 {
+    .card-body {
       padding: 15px;
-      margin: 0;
+    }
+    .testimonial {
+      background: #fff7f7;
+      border-left: 5px solid #b30000;
+      padding: 20px;
+      font-style: italic;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      max-width: 600px;
+      margin: auto;
+    }
+    input, textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background: #b30000;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #990000;
     }
     footer {
-      background: #2e2e2e;
-      color: white;
-      padding: 40px 30px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
     }
-    footer .column {
-      flex: 1 1 200px;
-      margin: 10px;
-    }
-    footer h4 {
-      margin-bottom: 10px;
-    }
-    footer ul {
-      list-style: none;
-      padding: 0;
-    }
-    footer ul li {
-      margin: 5px 0;
-    }
-    footer ul li a {
-      color: white;
+    footer a {
+      color: #ffd700;
+      margin: 0 10px;
       text-decoration: none;
     }
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      font-size: 20px;
-      margin-top: 10px;
+    .cta {
+      background: #ffd700;
+      padding: 40px 20px;
+      text-align: center;
     }
-    .btn {
+    .cta h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+    .cta a {
+      background: #b30000;
+      color: #fff;
       padding: 10px 20px;
-      background: #d32f2f;
-      color: white;
-      text-decoration: none;
       border-radius: 5px;
-      margin-top: 20px;
-      display: inline-block;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .cta a:hover {
+      background: #990000;
     }
   </style>
 </head>
 <body>
-  <header>
-    <div class="logo">Siddhi Architects</div>
-    <nav>
-  <ul>
-    <li><a href="interiors.html">Interiors</a></li>
-    <li>
-      <a href="design-ideas.html">Design Ideas</a>
-      <ul>
-        <li><a href="living-room.html">Living Room Designs</a></li>
-        <li><a href="bedroom.html">Bedroom Designs</a></li>
-        <li><a href="kitchen.html">Modular Kitchen</a></li>
-        <li><a href="false-ceiling.html">False Ceiling</a></li>
-      </ul>
-    </li>
-    <li><a href="how-it-works.html">How it Works</a></li>
-    <li><a href="portfolio.html">Portfolio</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</nav>
+  <div class="top-bar">
+    <div class="left">
+      <span><i class="fas fa-envelope"></i> hello@siddhiarchitects.com</span>
+      <span><i class="fas fa-phone"></i> +91-91086-02000</span>
+      <a href="price-calculator.html">Price Calculator</a>
+      <a href="customer-login.html">Customer Login</a>
+    </div>
+    <div class="right">
+      <span>Customer Support ▾</span>
+      <div class="social-icons">
+        <i class="fab fa-facebook-f"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-pinterest-p"></i>
+      </div>
+    </div>
+  </div>
 
+  <header>
+    <img src="898bc2b1-c0c5-4e43-9c48-f2381b04c6e7.png" alt="Siddhi Architects Logo">
+    <h1>SIDDHI ARCHITECTS</h1>
   </header>
 
-  <section class="hero">
-    <div>
-      <h1>Your dream home is just a click away with Siddhi Architects</h1>
-      <a href="#" class="btn">Book Free Consultation</a>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#portfolio">Siddhi Portfolio</a>
+    <div class="dropdown">
+      <a href="#">Services ▾</a>
+      <div class="dropdown-content">
+        <a href="#services-home">Home & Villa</a>
+        <a href="#services-apartments">Apartments</a>
+        <a href="#services-commercial">Commercial</a>
+        <a href="#services-hospitals">Hospital Care</a>
+        <a href="#services-halls">Convention Halls</a>
+        <a href="#services-custom">Custom Interiors</a>
+      </div>
     </div>
-  </section>
+    <a href="#siddhitv">Siddhi TV</a>
+    <a href="#contact">Contact Us</a>
+    <a href="#about">About Us</a>
+    <div class="dropdown">
+      <a href="#">Cities ▾</a>
+      <div class="dropdown-content">
+        <a href="#city1">Mumbai</a>
+        <a href="#city2">Pune</a>
+        <a href="#city3">Ahmedabad</a>
+        <a href="#city4">Surat</a>
+      </div>
+    </div>
+  </nav>
 
-  <section class="section">
-    <h2>Our Services</h2>
-    <div class="cards">
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?kitchen" alt="Modular Interiors">
-        <h3>Modular Interiors</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?living-room" alt="Full Home Interiors">
-        <h3>Full Home Interiors</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?luxury-home" alt="Luxury Interiors">
-        <h3>Luxury Interiors</h3>
-      </div>
-      <div class="card">
-        <img src="https://source.unsplash.com/400x300/?renovation" alt="Renovations">
-        <h3>Renovations</h3>
-      </div>
-    </div>
-  </section>
+  <div class="hero">
+    <h1>Designing Spaces That Heal, Inspire & Function Beautifully</h1>
+  </div>
 
-  <footer>
-    <div class="column">
-      <h4>Company</h4>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Careers</a></li>
-        <li><a href="#">Policies</a></li>
-      </ul>
-    </div>
-    <div class="column">
-      <h4>Contact Us</h4>
-      <p>Call us: 1800-000-0000</p>
-      <p>Email: contact@siddhiarchitects.com</p>
-      <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-pinterest"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-      </div>
-    </div>
-  </footer>
+  <!-- Additional content continues here (sections, gallery, etc.) -->
 </body>
 </html>
