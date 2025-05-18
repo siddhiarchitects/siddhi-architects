@@ -12,6 +12,7 @@
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
@@ -31,9 +32,7 @@
       align-items: center;
       gap: 20px;
     }
-    .top-bar .left i {
-      margin-right: 5px;
-    }
+    .top-bar .left i { margin-right: 5px; }
     .top-bar .left a {
       background: #f4803c;
       color: white;
@@ -82,13 +81,8 @@
       align-items: center;
       gap: 15px;
     }
-    .logo-title img {
-      height: 60px;
-    }
-    .logo-text {
-      display: flex;
-      flex-direction: column;
-    }
+    .logo-title img { height: 60px; }
+    .logo-text { display: flex; flex-direction: column; }
     .logo-text h1 {
       font-size: 1.8rem;
       color: #222;
@@ -104,6 +98,7 @@
       align-items: center;
       gap: 25px;
       font-weight: 500;
+      position: relative;
     }
     nav a {
       color: #333;
@@ -111,8 +106,40 @@
       padding: 8px 10px;
       transition: color 0.3s;
     }
-    nav a:hover {
-      color: #b30000;
+    nav a:hover { color: #b30000; }
+
+    /* Dropdown Styles */
+    nav .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: white;
+      min-width: 160px;
+      z-index: 1;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    nav .dropdown-content a {
+      color: #333;
+      padding: 10px 14px;
+      text-decoration: none;
+      display: block;
+      white-space: nowrap;
+    }
+
+    nav .dropdown-content a:hover {
+      background-color: #f4803c;
+      color: white;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .hero {
@@ -135,19 +162,37 @@
       object-fit: cover;
       z-index: -1;
     }
-    .hero h1 {
-      background: rgba(0,0,0,0.6);
-      padding: 20px;
-      border-radius: 10px;
-      font-size: 2.5rem;
-      max-width: 90%;
+
+    .center-left-quote {
+      position: absolute;
+      left: 120px;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: left;
+      max-width: 50%;
     }
+
+    .center-left-quote .main-quote {
+      font-size: 50px;
+      font-weight: bold;
+      color: #FFA07A;
+      transition: opacity 0.4s ease-in-out;
+    }
+
+    .center-left-quote .sub-quote {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      margin-top: 10px;
+    }
+
     .hero-buttons {
       margin-top: 30px;
       display: flex;
       align-items: center;
       gap: 15px;
     }
+
     .hero-buttons a {
       padding: 12px 20px;
       font-size: 16px;
@@ -157,9 +202,11 @@
       border-radius: 6px;
       transition: background-color 0.3s;
     }
+
     .hero-buttons a:hover {
       background-color: #d76625;
     }
+
     .nav-arrow {
       position: absolute;
       top: 50%;
@@ -173,24 +220,6 @@
     .nav-arrow.right { right: 25px; }
     .nav-arrow.left { left: 25px; }
 
-    /* Quote Styles */
-    .center-left-quote {
-      position: absolute;
-      left: 80px;
-      top: 40%;
-      transform: translateY(-60%);
-      font-weight: bold;
-      color: #FF7F7F; /* Light Red */;
-      text-align: left;
-      max-width: 40%;
-      animation: fadeIn 1s ease-in-out;
-    }
-
-    @keyframes fadeIn {
-      0% { opacity: 0; }
-      100% { opacity: 1; }
-    }
-
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 10px; }
       header { flex-direction: column; align-items: flex-start; }
@@ -203,19 +232,10 @@
         left: 20px;
       }
     }
-    .center-left-quote .main-quote {
-      font-size: 2.5rem;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .center-left-quote .sub-quote {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin-top: 10px;
-  color: #f4803c;
-}
   </style>
 </head>
 <body>
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
@@ -234,6 +254,7 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="logo-title">
       <img src="salogo.png" alt="Siddhi Architects Logo">
@@ -245,97 +266,92 @@
     <nav>
       <a href="#">Home</a>
       <a href="#portfolio">Siddhi Portfolio</a>
-      <a href="#">Services</a>
+      
+      <div class="dropdown">
+        <a href="#">Services</a>
+        <div class="dropdown-content">
+          <a href="#">Architecture</a>
+          <a href="#">Interior Design</a>
+          <a href="#">Turnkey Projects</a>
+        </div>
+      </div>
+
       <a href="#siddhitv">Siddhi TV</a>
       <a href="#contact">Contact Us</a>
       <a href="#about">About Us</a>
-      <a href="#">Cities</a>
+      
+      <div class="dropdown">
+        <a href="#">Cities</a>
+        <div class="dropdown-content">
+          <a href="#">Hyderabad</a>
+          <a href="#">Bangalore</a>
+          <a href="#">Chennai</a>
+          <a href="#">Vizag</a>
+        </div>
+      </div>
     </nav>
   </header>
-      <div class="hero">
-  <video autoplay muted loop playsinline>
-    <source src="hero-video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
 
-  <div class="center-left-quote">
-    <span id="quoteText" class="main-quote">మీ కలలు, మా రూపకల్పన!</span>
-    <div class="sub-quote">Designing Beauty Within Your Budget</div>
+  <!-- Hero Section -->
+  <div class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+
+    <div class="center-left-quote">
+      <span id="quoteText" class="main-quote">మీ కలలు, మా రూపకల్పన!</span>
+      <div class="sub-quote">Designing Beauty Within Your Budget</div>
+    </div>
+
+    <h1 id="heroTitle">Book Free Consultation</h1>
+    <div class="hero-buttons">
+      <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
+    </div>
+    <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
+    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
-  <h1 id="heroTitle">Book Free Consultation</h1>
-  <div class="hero-buttons">
-    <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
-  </div>
-  <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
-  <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
-</div>
+  <script>
+    const sections = [
+      { title: "Book Free Consultation", link: "book-consultation.html" },
+      { title: "Calculate Now", link: "price-calculator.html" },
+      { title: "Visit Us", link: "visit-us.html" }
+    ];
+    let currentIndex = 0;
 
-<style>
-  .center-left-quote {
-    position: absolute;
-    left: 80px;
-    top: 40%;
-    transform: translateY(-50%);
-    text-align: left;
-    max-width: 50%;
-  }
+    function updateSection() {
+      const section = sections[currentIndex];
+      document.getElementById("heroTitle").innerText = section.title;
+      document.getElementById("heroButton").innerText = section.title;
+      document.getElementById("heroButton").href = section.link;
+    }
 
-  .center-left-quote .main-quote {
-    font-size: 50px;
-    font-weight: bold;
-    color: #f4803c;
-    transition: opacity 0.5s ease-in-out;
-  }
+    function cycleSection() {
+      currentIndex = (currentIndex + 1) % sections.length;
+      updateSection();
+    }
 
-  .center-left-quote .sub-quote {
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    margin-top: 10px;
-  }
-</style>
+    function previousSection() {
+      currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+      updateSection();
+    }
 
-<script>
-  const sections = [
-    { title: "", link: "book-consultation.html" },
-    { title: "", link: "price-calculator.html" },
-    { title: "", link: "visit-us.html" }
-  ];
-  let currentIndex = 0;
+    const quotes = [
+      "మీ కలలు, మా రూపకల్పన!",
+      "Your Dreams, Our Design!"
+    ];
+    let quoteIndex = 0;
 
-  function updateSection() {
-    const section = sections[currentIndex];
-    document.getElementById("heroTitle").innerText = section.title;
-    document.getElementById("heroButton").innerText = section.title;
-    document.getElementById("heroButton").href = section.link;
-  }
-
-  function cycleSection() {
-    currentIndex = (currentIndex + 1) % sections.length;
-    updateSection();
-  }
-
-  function previousSection() {
-    currentIndex = (currentIndex - 1 + sections.length) % sections.length;
-    updateSection();
-  }
-
-  // Rolling quote switcher
-  const quotes = [
-    "మీ కలలు, మా రూపకల్పన!",
-    "Your Dreams, Our Design!"
-  ];
-  let quoteIndex = 0;
-   setInterval(() => {
-    quoteIndex = (quoteIndex + 1) % quotes.length;
-    const quoteEl = document.getElementById("quoteText");
-    quoteEl.style.opacity = 0;
-    setTimeout(() => {
-    quoteEl.innerText = quotes[quoteIndex];
-    quoteEl.style.opacity = 1;
-    }, 500);
-  }, 6000);
-</script>
+    setInterval(() => {
+      quoteIndex = (quoteIndex + 1) % quotes.length;
+      const quoteEl = document.getElementById("quoteText");
+      quoteEl.style.opacity = 0;
+      setTimeout(() => {
+        quoteEl.innerText = quotes[quoteIndex];
+        quoteEl.style.opacity = 1;
+      }, 500);
+    }, 6000);
+  </script>
 </body>
 </html>
