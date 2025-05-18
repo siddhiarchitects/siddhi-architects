@@ -12,7 +12,6 @@
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
@@ -32,7 +31,9 @@
       align-items: center;
       gap: 20px;
     }
-    .top-bar .left i { margin-right: 5px; }
+    .top-bar .left i {
+      margin-right: 5px;
+    }
     .top-bar .left a {
       background: #f4803c;
       color: white;
@@ -74,13 +75,16 @@
       background: #fff;
       padding: 15px 30px;
       border-bottom: 2px solid #ddd;
+      flex-wrap: wrap;
     }
     .logo-title {
       display: flex;
       align-items: center;
       gap: 15px;
     }
-    .logo-title img { height: 60px; }
+    .logo-title img {
+      height: 60px;
+    }
     .logo-text {
       display: flex;
       flex-direction: column;
@@ -100,7 +104,6 @@
       align-items: center;
       gap: 25px;
       font-weight: 500;
-      position: relative;
     }
     nav a {
       color: #333;
@@ -110,34 +113,6 @@
     }
     nav a:hover {
       color: #b30000;
-    }
-
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 180px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      z-index: 999;
-      top: 35px;
-      left: 0;
-      border-radius: 6px;
-    }
-    .dropdown-content a {
-      display: block;
-      padding: 10px 15px;
-      color: #333;
-      text-decoration: none;
-      transition: background-color 0.3s;
-    }
-    .dropdown-content a:hover {
-      background-color: #f5f5f5;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
 
     .hero {
@@ -198,51 +173,42 @@
     .nav-arrow.right { right: 25px; }
     .nav-arrow.left { left: 25px; }
 
-    .quote-banner {
+    /* Quote Styles */
+    .center-left-quote {
       position: absolute;
-      bottom: 80px;
-      width: 100%;
-      overflow: hidden;
-      white-space: nowrap;
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: #fff;
+      left: 30px;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.8rem;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 10px 20px;
+      border-radius: 8px;
+      font-weight: 500;
+      max-width: 40%;
+      animation: fadeIn 1s ease-in-out;
     }
-    .scrolling-text {
-      display: inline-block;
-      padding-left: 100%;
-      animation: scroll-text 15s linear infinite;
-    }
-    @keyframes scroll-text {
-      0% { transform: translateX(0%); }
-      100% { transform: translateX(-100%); }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
     }
 
     @media (max-width: 768px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
-      header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-      .hero h1 {
-        font-size: 2rem;
-        padding: 15px;
-      }
-      .top-bar .right {
-        margin-left: 0;
-        justify-content: center;
-      }
-      .hero-buttons {
-        flex-direction: column;
+      nav { flex-direction: column; gap: 10px; }
+      header { flex-direction: column; align-items: flex-start; }
+      .hero h1 { font-size: 2rem; padding: 15px; }
+      .top-bar .right { justify-content: center; }
+      .hero-buttons { flex-direction: column; }
+      .center-left-quote {
+        font-size: 1.2rem;
+        max-width: 80%;
+        left: 20px;
       }
     }
   </style>
 </head>
 <body>
-
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
@@ -272,44 +238,23 @@
     <nav>
       <a href="#">Home</a>
       <a href="#portfolio">Siddhi Portfolio</a>
-      <div class="dropdown">
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="#services-home">Home & Villa</a>
-          <a href="#services-apartments">Apartments</a>
-          <a href="#services-commercial">Commercial</a>
-          <a href="#services-hospitals">Hospital Care</a>
-          <a href="#services-halls">Convention Halls</a>
-          <a href="#services-custom">Custom Interiors</a>
-          <a href="#services-temples">Temple Designs</a>
-        </div>
-      </div>
+      <a href="#">Services</a>
       <a href="#siddhitv">Siddhi TV</a>
       <a href="#contact">Contact Us</a>
       <a href="#about">About Us</a>
-      <div class="dropdown">
-        <a href="#">Cities ▾</a>
-        <div class="dropdown-content">
-          <a href="#city1">Vijayawada</a>
-          <a href="#city2">Guntur</a>
-          <a href="#city3">Chirala</a>
-          <a href="#city4">Nellore</a>
-          <a href="#city5">Hyderabad</a>
-          <a href="#city6">Chennai</a>
-        </div>
-      </div>
+      <a href="#">Cities</a>
     </nav>
   </header>
-
+  
   <div class="hero">
     <video autoplay muted loop playsinline>
       <source src="hero-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <h1 id="heroTitle">Book Free Consultation</h1>
-    <div class="quote-banner">
-      <div class="scrolling-text" id="quoteText">మీ కలలు, మా రూపకల్పన!</div>
+    <div class="center-left-quote">
+      <span id="quoteText">మీ కలలు, మా రూపకల్పన!</span>
     </div>
+    <h1 id="heroTitle">Book Free Consultation</h1>
     <div class="hero-buttons">
       <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
     </div>
@@ -342,7 +287,7 @@
       updateSection();
     }
 
-    // Quote Scrolling Text Switch
+    // Quote text switcher
     const quotes = [
       "మీ కలలు, మా రూపకల్పన!",
       "Your Dreams, Our Design!"
@@ -352,9 +297,12 @@
     setInterval(() => {
       quoteIndex = (quoteIndex + 1) % quotes.length;
       const quoteEl = document.getElementById("quoteText");
-      quoteEl.innerText = quotes[quoteIndex];
-    }, 8000);
+      quoteEl.style.opacity = 0;
+      setTimeout(() => {
+        quoteEl.innerText = quotes[quoteIndex];
+        quoteEl.style.opacity = 1;
+      }, 500);
+    }, 6000);
   </script>
-
 </body>
 </html>
