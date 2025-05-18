@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
   <title>Siddhi Architects | Home</title> 
-  <link rel="icon" href="favicon.png" type="image/png">
+  <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -29,17 +29,17 @@
     .top-bar .left i {
       margin-right: 5px;
     }
+    .top-bar .left a {
+      background: #f4803c;
+      color: white;
+      text-decoration: none;
+      padding: 6px 12px;
+      border-radius: 4px;
+    }
     .top-bar .right {
       display: flex;
       align-items: center;
       gap: 15px;
-    }
-    .top-bar .right a {
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      background: #f4803c;
-      border-radius: 4px;
     }
     .top-bar .social-icons a {
       margin-left: 10px;
@@ -60,27 +60,24 @@
     }
     .logo-title {
       display: flex;
-      align-items: flex-start;
+      align-items: center;
+      gap: 15px;
+    }
+    .logo-title img {
+      height: 60px;
+    }
+    .logo-text {
+      display: flex;
       flex-direction: column;
     }
-    .logo-title-row {
-      display: flex;
-      align-items: center;
-    }
-    .logo-title-row img {
-      height: 45px;
-      margin-right: 10px;
-    }
-    .logo-title-row h1 {
-      font-size: 1.6rem;
+    .logo-text h1 {
+      font-size: 1.8rem;
       color: #222;
       font-weight: bold;
     }
-    .logo-subtitle {
+    .logo-text .logo-subtitle {
       font-size: 0.9rem;
       color: #666;
-      margin-top: 3px;
-      margin-left: 55px;
     }
 
     nav {
@@ -196,11 +193,11 @@
 
   <header>
     <div class="logo-title">
-      <div class="logo-title-row">
-        <img src="salogo.png" alt="Siddhi Architects Logo">
+      <img src="salogo.png" alt="Siddhi Architects Logo">
+      <div class="logo-text">
         <h1>SIDDHI ARCHITECTS</h1>
+        <div class="logo-subtitle">Interior | Architecture</div>
       </div>
-      <div class="logo-subtitle">Interior | Architecture</div>
     </div>
     <nav>
       <a href="#">Home</a>
