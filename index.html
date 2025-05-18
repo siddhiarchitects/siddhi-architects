@@ -3,11 +3,6 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
-  <meta property="og:title" content="Siddhi Architects - Interior and Architecture Excellence" />
-  <meta property="og:description" content="Elegant and functional designs for residential, commercial, and hospital spaces." />
-  <meta property="og:image" content="https://yoursite.com/preview-image.jpg" />
-  <meta property="og:url" content="https://yoursite.com/" />
   <title>Siddhi Architects | Home</title>
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
@@ -15,8 +10,9 @@
 
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #333; background: #fff; }
 
+    /* --- Top Bar --- */
     .top-bar {
       background-color: #1e3556;
       color: white;
@@ -67,6 +63,7 @@
     .top-bar .social-icons a .fa-youtube { color: #ff0000; }
     .top-bar .social-icons a .fa-pinterest-p { color: #bd081c; }
 
+    /* --- Header --- */
     header {
       display: flex;
       align-items: center;
@@ -93,6 +90,7 @@
       color: #666;
     }
 
+    /* --- Navigation Menu --- */
     nav {
       display: flex;
       align-items: center;
@@ -113,7 +111,10 @@
       position: relative;
       display: inline-block;
     }
-
+    nav .dropdown > a::after {
+      content: " ▼";
+      font-size: 12px;
+    }
     nav .dropdown-content {
       display: none;
       position: absolute;
@@ -124,7 +125,6 @@
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-
     nav .dropdown-content a {
       color: #333;
       padding: 10px 14px;
@@ -132,26 +132,20 @@
       display: block;
       white-space: nowrap;
     }
-
     nav .dropdown-content a:hover {
       background-color: #f4803c;
       color: white;
     }
-
     nav .dropdown:hover .dropdown-content {
       display: block;
     }
 
+    /* --- Hero Section --- */
     .hero {
-      height: 90vh;
       position: relative;
+      width: 100%;
+      height: 90vh;
       overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      flex-direction: column;
     }
     .hero video {
       position: absolute;
@@ -160,25 +154,23 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      z-index: -1;
     }
 
     .center-left-quote {
       position: absolute;
       left: 120px;
-      top: 50%;
+      top: 40%;
       transform: translateY(-50%);
       text-align: left;
       max-width: 50%;
+      z-index: 2;
     }
-
     .center-left-quote .main-quote {
       font-size: 50px;
       font-weight: bold;
-      color: #FFA07A;
-      transition: opacity 0.4s ease-in-out;
+      color: #f4803c;
+      transition: opacity 0.5s ease-in-out;
     }
-
     .center-left-quote .sub-quote {
       font-size: 30px;
       font-weight: bold;
@@ -186,54 +178,44 @@
       margin-top: 10px;
     }
 
-    .hero-buttons {
-      margin-top: 30px;
+    /* --- Below Video Buttons --- */
+    .below-video-buttons {
       display: flex;
-      align-items: center;
-      gap: 15px;
+      justify-content: center;
+      gap: 20px;
+      padding: 30px 0;
+      background: #f9f9f9;
     }
-
-    .hero-buttons a {
-      padding: 12px 20px;
-      font-size: 16px;
-      background-color: #f4803c;
+    .below-video-buttons a {
+      background-color: #b30000;
       color: white;
       text-decoration: none;
+      padding: 14px 24px;
+      font-size: 16px;
       border-radius: 6px;
+      font-weight: 600;
       transition: background-color 0.3s;
     }
-
-    .hero-buttons a:hover {
-      background-color: #d76625;
+    .below-video-buttons a:hover {
+      background-color: #8a0000;
     }
-
-    .nav-arrow {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 2rem;
-      background-color: rgba(0,0,0,0.5);
-      padding: 10px;
-      border-radius: 50%;
-      cursor: pointer;
-    }
-    .nav-arrow.right { right: 25px; }
-    .nav-arrow.left { left: 25px; }
 
     @media (max-width: 768px) {
       nav { flex-direction: column; gap: 10px; }
       header { flex-direction: column; align-items: flex-start; }
-      .hero h1 { font-size: 2rem; padding: 15px; }
-      .top-bar .right { justify-content: center; }
-      .hero-buttons { flex-direction: column; }
       .center-left-quote {
         font-size: 1.2rem;
         max-width: 80%;
         left: 20px;
       }
+      .below-video-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
     }
   </style>
 </head>
+
 <body>
   <!-- Top Bar -->
   <div class="top-bar">
@@ -245,11 +227,11 @@
     </div>
     <div class="right">
       <div class="social-icons">
-        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.instagram.com/siddhi_architects" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.youtube.com/siddhi_architects" target="_blank"><i class="fab fa-youtube"></i></a>
-        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+        <a href="#"><i class="fab fa-facebook-f"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+        <a href="#"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
   </div>
@@ -257,7 +239,7 @@
   <!-- Header -->
   <header>
     <div class="logo-title">
-      <img src="salogo.png" alt="Siddhi Architects Logo">
+      <img src="salogo.png" alt="Logo">
       <div class="logo-text">
         <h1>SIDDHI ARCHITECTS</h1>
         <div class="logo-subtitle">Interior | Architecture</div>
@@ -265,8 +247,7 @@
     </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#portfolio">Siddhi Portfolio</a>
-      
+      <a href="#">Siddhi Portfolio</a>
       <div class="dropdown">
         <a href="#">Services</a>
         <div class="dropdown-content">
@@ -275,11 +256,9 @@
           <a href="#">Turnkey Projects</a>
         </div>
       </div>
-
-      <a href="#siddhitv">Siddhi TV</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#about">About Us</a>
-      
+      <a href="#">Siddhi TV</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
       <div class="dropdown">
         <a href="#">Cities</a>
         <div class="dropdown-content">
@@ -298,51 +277,26 @@
       <source src="hero-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-
     <div class="center-left-quote">
       <span id="quoteText" class="main-quote">మీ కలలు, మా రూపకల్పన!</span>
       <div class="sub-quote">Designing Beauty Within Your Budget</div>
     </div>
-
-    <h1 id="heroTitle">Book Free Consultation</h1>
-    <div class="hero-buttons">
-      <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
-    </div>
-    <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
-    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
+  <!-- Buttons BELOW the video -->
+  <div class="below-video-buttons">
+    <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
+    <a id="calculateBtn" href="price-calculator.html">Calculate Now</a>
+    <a id="visitBtn" href="visit-us.html">Visit Us</a>
+  </div>
+
+  <!-- Quote Cycling Script -->
   <script>
-    const sections = [
-      { title: "Book Free Consultation", link: "book-consultation.html" },
-      { title: "Calculate Now", link: "price-calculator.html" },
-      { title: "Visit Us", link: "visit-us.html" }
-    ];
-    let currentIndex = 0;
-
-    function updateSection() {
-      const section = sections[currentIndex];
-      document.getElementById("heroTitle").innerText = section.title;
-      document.getElementById("heroButton").innerText = section.title;
-      document.getElementById("heroButton").href = section.link;
-    }
-
-    function cycleSection() {
-      currentIndex = (currentIndex + 1) % sections.length;
-      updateSection();
-    }
-
-    function previousSection() {
-      currentIndex = (currentIndex - 1 + sections.length) % sections.length;
-      updateSection();
-    }
-
     const quotes = [
       "మీ కలలు, మా రూపకల్పన!",
       "Your Dreams, Our Design!"
     ];
     let quoteIndex = 0;
-
     setInterval(() => {
       quoteIndex = (quoteIndex + 1) % quotes.length;
       const quoteEl = document.getElementById("quoteText");
