@@ -48,43 +48,42 @@
     header {
       display: flex;
       align-items: center;
+      justify-content: space-between;
       background: #fff;
-      padding: 10px 30px;
+      padding: 15px 30px;
       border-bottom: 2px solid #ddd;
     }
-    header img {
-      height: 50px;
-      margin-right: 15px;
-    }
-    header h1 {
-      font-size: 1.8rem;
-      color: #222;
-      margin-right: auto;
-    }
-    nav {
-      background: #fff;
+    .logo-title {
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-      padding: 15px 10px;
-      border-bottom: 2px solid #eee;
+      align-items: center;
+    }
+    .logo-title img {
+      height: 45px;
+      margin-right: 10px;
+    }
+    .logo-title h1 {
+      font-size: 1.6rem;
+      color: #222;
       font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      font-weight: 500;
     }
     nav a {
       color: #333;
       text-decoration: none;
-      padding: 8px 15px;
-      border-radius: 4px;
-      transition: background 0.3s, color 0.3s;
+      padding: 8px 10px;
+      transition: color 0.3s;
     }
     nav a:hover {
-      background: #b30000;
-      color: #fff;
+      color: #b30000;
     }
     .dropdown {
       position: relative;
-      display: inline-block;
     }
     .dropdown-content {
       display: none;
@@ -106,6 +105,7 @@
     .dropdown:hover .dropdown-content {
       display: block;
     }
+
     .hero {
       height: 90vh;
       background: url('hero-image.jpg') center/cover no-repeat;
@@ -121,108 +121,13 @@
       border-radius: 10px;
       font-size: 3rem;
     }
-    section {
-      padding: 60px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    h2 {
-      font-size: 2.5rem;
-      color: #b30000;
-      margin-bottom: 30px;
-      text-align: center;
-    }
-    .features, .gallery, .testimonials, .contact-form {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      overflow: hidden;
-      transition: transform 0.3s;
-    }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .card-body {
-      padding: 15px;
-    }
-    .testimonial {
-      background: #fff7f7;
-      border-left: 5px solid #b30000;
-      padding: 20px;
-      font-style: italic;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-      max-width: 600px;
-      margin: auto;
-    }
-    input, textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-    button {
-      background: #b30000;
-      color: #fff;
-      border: none;
-      padding: 10px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    button:hover {
-      background: #990000;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 30px 10px;
-      margin-top: 40px;
-    }
-    footer a {
-      color: #ffd700;
-      margin: 0 10px;
-      text-decoration: none;
-    }
-    .cta {
-      background: #ffd700;
-      padding: 40px 20px;
-      text-align: center;
-    }
-    .cta h2 {
-      margin-bottom: 20px;
-      color: #333;
-    }
-    .cta a {
-      background: #b30000;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 5px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    .cta a:hover {
-      background: #990000;
-    }
   </style>
 </head>
 <body>
   <div class="top-bar">
     <div class="left">
-      <span><i class="fas fa-envelope"></i> hello@siddhiarchitects.com</span>
-      <span><i class="fas fa-phone"></i> +91-91086-02000</span>
+      <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
+      <span><i class="fas fa-phone"></i> +91-82473-12188</span>
       <a href="price-calculator.html">Price Calculator</a>
       <a href="customer-login.html">Customer Login</a>
     </div>
@@ -239,42 +144,43 @@
   </div>
 
   <header>
-    <img src="898bc2b1-c0c5-4e43-9c48-f2381b04c6e7.png" alt="Siddhi Architects Logo">
-    <h1>SIDDHI ARCHITECTS</h1>
+    <div class="logo-title">
+      <img src="salogo.png" alt="Siddhi Architects Logo">
+      <h1>SIDDHI ARCHITECTS</h1>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#portfolio">Siddhi Portfolio</a>
+      <div class="dropdown">
+        <a href="#">Services ▾</a>
+        <div class="dropdown-content">
+          <a href="#services-home">Home & Villa</a>
+          <a href="#services-apartments">Apartments</a>
+          <a href="#services-commercial">Commercial</a>
+          <a href="#services-hospitals">Hospital Care</a>
+          <a href="#services-halls">Convention Halls</a>
+          <a href="#services-custom">Custom Interiors</a>
+          <a href="#services-custom">Temple Designs</a>
+        </div>
+      </div>
+      <a href="#siddhitv">Siddhi TV</a>
+      <a href="#about">About Us</a>
+      <div class="dropdown">
+        <a href="#">Cities ▾</a>
+        <div class="dropdown-content">
+          <a href="#city1">Vijayawada</a>
+          <a href="#city2">Guntur</a>
+          <a href="#city3">Chirala</a>
+          <a href="#city4">Nellore</a>
+          <a href="#city4">Hyderabad</a>
+          <a href="#city4">Chennai</a>
+        </div>
+      </div>
+    </nav>
   </header>
-
-  <nav>
-    <a href="#">Home</a>
-    <a href="#portfolio">Siddhi Portfolio</a>
-    <div class="dropdown">
-      <a href="#">Services ▾</a>
-      <div class="dropdown-content">
-        <a href="#services-home">Home & Villa</a>
-        <a href="#services-apartments">Apartments</a>
-        <a href="#services-commercial">Commercial</a>
-        <a href="#services-hospitals">Hospital Care</a>
-        <a href="#services-halls">Convention Halls</a>
-        <a href="#services-custom">Custom Interiors</a>
-      </div>
-    </div>
-    <a href="#siddhitv">Siddhi TV</a>
-    <a href="#contact">Contact Us</a>
-    <a href="#about">About Us</a>
-    <div class="dropdown">
-      <a href="#">Cities ▾</a>
-      <div class="dropdown-content">
-        <a href="#city1">Mumbai</a>
-        <a href="#city2">Pune</a>
-        <a href="#city3">Ahmedabad</a>
-        <a href="#city4">Surat</a>
-      </div>
-    </div>
-  </nav>
 
   <div class="hero">
     <h1>Designing Spaces That Heal, Inspire & Function Beautifully</h1>
   </div>
-
-  <!-- Additional content continues here (sections, gallery, etc.) -->
 </body>
 </html>
