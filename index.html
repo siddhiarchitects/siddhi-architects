@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
+  <meta property="og:title" content="Siddhi Architects - Interior and Architecture Excellence" />
+  <meta property="og:description" content="Elegant and functional designs for residential, commercial, and hospital spaces." />
+  <meta property="og:image" content="https://yoursite.com/preview-image.jpg" />
+  <meta property="og:url" content="https://yoursite.com/" />
+  <title>Siddhi Architects | Home</title>
+  <link rel="icon" href="salogo.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="left">
+      <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
+      <span><i class="fas fa-phone"></i> +91-82473-12188</span>
+      <a href="price-calculator.html">Price Calculator</a>
+      <a href="customer-login.html">Customer Login</a>
+    </div>
+    <div class="right">
+      <div class="social-icons">
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/siddhi_architects" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/siddhi_architects" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <header>
+    <div class="logo-title">
+      <img src="salogo.png" alt="Siddhi Architects Logo">
+      <div class="logo-text">
+        <h1>SIDDHI ARCHITECTS</h1>
+        <div class="logo-subtitle">Interior | Architecture</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#portfolio">Siddhi Portfolio</a>
+
+      <div class="dropdown">
+        <a onclick="toggleDropdown('servicesDropdown')">Services ?</a>
+        <div class="dropdown-content" id="servicesDropdown">
+          <a href="#services-home">Home & Villa</a>
+          <a href="#services-apartments">Apartments</a>
+          <a href="#services-commercial">Commercial</a>
+          <a href="#services-hospitals">Hospital Care</a>
+          <a href="#services-halls">Convention Halls</a>
+          <a href="#services-custom">Custom Interiors</a>
+          <a href="#services-temples">Temple Designs</a>
+        </div>
+      </div>
+
+      <a href="#siddhitv">Siddhi TV</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#about">About Us</a>
+
+      <div class="dropdown">
+        <a onclick="toggleDropdown('citiesDropdown')">Cities ?</a>
+        <div class="dropdown-content" id="citiesDropdown">
+          <a href="#city1">Vijayawada</a>
+          <a href="#city2">Guntur</a>
+          <a href="#city3">Chirala</a>
+          <a href="#city4">Nellore</a>
+          <a href="#city5">Hyderabad</a>
+          <a href="#city6">Chennai</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <video autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1 id="heroTitle">Book Free Consultation</h1>
+    <div class="hero-buttons">
+      <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
+    </div>
+    <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
+    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
+  </div>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
