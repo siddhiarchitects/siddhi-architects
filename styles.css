@@ -99,6 +99,14 @@ nav {
   font-weight: 500;
   position: relative;
 }
+
+/* Style for dropdown arrow icons in nav */
+nav a i {
+  margin-left: 5px;      /* spacing between text and icon */
+  font-size: 0.7em;       /* smaller icon size */
+  vertical-align: middle; /* aligns icon with text */
+}
+
 nav a {
   color: #333;
   text-decoration: none;
@@ -106,9 +114,10 @@ nav a {
   transition: color 0.3s;
   cursor: pointer;
 }
-nav a:hover {
-  color: #b30000;
+nav a:hover i {
+  color: #ff7f50; /* Or any color you like */
 }
+
 
 .dropdown {
   position: relative;
