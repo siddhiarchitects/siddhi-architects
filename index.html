@@ -176,15 +176,12 @@
     /* Quote Styles */
     .center-left-quote {
       position: absolute;
-      left: 30px;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.8rem;
-      color: white;
-      background-color: rgba(0, 0, 0, 0.4);
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-weight: 500;
+      left: 80px;
+      top: 40%;
+      transform: translateY(-60%);
+      font-weight: bold;
+      color: #f4803c;
+      text-align: left;
       max-width: 40%;
       animation: fadeIn 1s ease-in-out;
     }
@@ -206,6 +203,16 @@
         left: 20px;
       }
     }
+    .center-left-quote .main-quote {
+      font-size: 2.5rem;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .center-left-quote .sub-quote {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #f4803c;
+}
   </style>
 </head>
 <body>
@@ -253,6 +260,7 @@
     </video>
     <div class="center-left-quote">
       <span id="quoteText">మీ కలలు, మా రూపకల్పన!</span>
+      <div class="sub-quote">Designing Beauty Within Your Budget</div>
     </div>
     <h1 id="heroTitle">Book Free Consultation</h1>
     <div class="hero-buttons">
