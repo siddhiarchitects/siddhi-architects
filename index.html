@@ -16,6 +16,33 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
 
+    /* Dropdown CSS for click behavior */
+.dropdown {
+  position: relative;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  z-index: 1000;
+  min-width: 180px;
+}
+.dropdown-content a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: #333;
+}
+.dropdown-content a:hover {
+  background-color: #f5f5f5;
+}
+.dropdown-content.show {
+  display: block;
+}
+
+    
     .top-bar {
       background-color: #1e3556;
       color: white;
@@ -298,5 +325,26 @@
       updateSection();
     }
   </script>
+
+  <script>
+  function toggleDropdown(id) {
+    const dropdown = document.getElementById(id);
+    const allDropdowns = document.querySelectorAll('.dropdown-content');
+    allDropdowns.forEach(el => {
+      if (el.id !== id) {
+        el.classList.remove('show');
+      }
+    });
+    dropdown.classList.toggle('show');
+  }
+
+  // Close dropdowns when clicking outside
+  window.addEventListener('click', function(e) {
+    if (!e.target.matches('.dropdown > a')) {
+      document.querySelectorAll('.dropdown-content').forEach(el => el.classList.remove('show'));
+    }
+  });
+</script>
+
 </body>
 </html>
