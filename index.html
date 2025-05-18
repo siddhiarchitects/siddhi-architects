@@ -4,18 +4,23 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
-  <title>Siddhi Architects | Home</title> 
+  <meta property="og:title" content="Siddhi Architects - Interior and Architecture Excellence" />
+  <meta property="og:description" content="Elegant and functional designs for residential, commercial, and hospital spaces." />
+  <meta property="og:image" content="https://yoursite.com/preview-image.jpg" />
+  <meta property="og:url" content="https://yoursite.com/" />
+  <title>Siddhi Architects | Home</title>
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', sans-serif; background: #fff; color: #333; }
+    body { font-family: 'Inter', sans-serif; background: #fff; color: #333; scroll-behavior: smooth; }
 
     .top-bar {
       background-color: #1e3556;
       color: white;
       display: flex;
-      justify-content: center;
+      justify-content: space-between;
       align-items: center;
       padding: 10px 30px;
       font-size: 14px;
@@ -39,17 +44,23 @@
     .top-bar .right {
       display: flex;
       align-items: center;
-      gap: 15px;
-      margin-left: 40px;
+      gap: 10px;
+    }
+    .top-bar .social-icons {
+      display: flex;
+      gap: 4px;
     }
     .top-bar .social-icons a {
-      margin-left: 10px;
       text-decoration: none;
-      font-size: 16px;
-      background-color: #fff;
-      padding: 6px;
-      border-radius: 50%;
-      display: inline-block;
+      font-size: 10px;
+      background-color: white;
+      padding: 1px;
+      width: 10px;
+      height: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 2px;
     }
     .top-bar .social-icons a .fa-facebook-f { color: #3b5998; }
     .top-bar .social-icons a .fa-linkedin-in { color: #0077b5; }
@@ -64,6 +75,7 @@
       background: #fff;
       padding: 15px 30px;
       border-bottom: 2px solid #ddd;
+      flex-wrap: wrap;
     }
     .logo-title {
       display: flex;
@@ -102,88 +114,98 @@
     nav a:hover {
       color: #b30000;
     }
-    .dropdown {
-      position: relative;
-    }
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: #fff;
-      min-width: 200px;
-      box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-      z-index: 1;
-    }
-    .dropdown-content a {
-      color: #333;
-      padding: 10px;
-      text-decoration: none;
-      display: block;
-    }
-    .dropdown-content a:hover {
-      background-color: #f2f2f2;
-    }
-    .dropdown:hover .dropdown-content {
-      display: block;
-    }
 
     .hero {
       height: 90vh;
-      background: url('hero-image.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
       display: flex;
       justify-content: center;
       align-items: center;
       text-align: center;
       color: #fff;
+      flex-direction: column;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
     .hero h1 {
       background: rgba(0,0,0,0.6);
       padding: 20px;
       border-radius: 10px;
-      font-size: 3rem;
+      font-size: 2.5rem;
+      max-width: 90%;
     }
-
-    .form-popup {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background-color: white;
-      border: 2px solid #ccc;
-      padding: 20px;
-      z-index: 1000;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    .hero-buttons {
+      margin-top: 30px;
+      display: flex;
+      align-items: center;
+      gap: 15px;
     }
-    .form-popup input, .form-popup select {
-      width: 100%;
-      padding: 8px;
-      margin: 10px 0;
-    }
-    .form-popup button {
-      padding: 8px 15px;
-      background-color: #1e3556;
+    .hero-buttons a {
+      padding: 12px 20px;
+      font-size: 16px;
+      background-color: #f4803c;
       color: white;
-      border: none;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background-color 0.3s;
+    }
+    .hero-buttons a:hover {
+      background-color: #d76625;
+    }
+    .nav-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background-color: rgba(0,0,0,0.5);
+      padding: 10px;
+      border-radius: 50%;
       cursor: pointer;
     }
-    .form-popup .close {
-      background-color: #ccc;
-      margin-left: 10px;
+    .nav-arrow.right {
+      right: 25px;
+    }
+    .nav-arrow.left {
+      left: 25px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero h1 {
+        font-size: 2rem;
+        padding: 15px;
+      }
+      .top-bar .right {
+        margin-left: 0;
+        justify-content: center;
+      }
+      .hero-buttons {
+        flex-direction: column;
+      }
     }
   </style>
-  <script>
-    function toggleCalculator() {
-      const form = document.getElementById('priceForm');
-      form.style.display = form.style.display === 'block' ? 'none' : 'block';
-    }
-  </script>
 </head>
 <body>
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
       <span><i class="fas fa-phone"></i> +91-82473-12188</span>
-      <a href="#" onclick="toggleCalculator()">Price Calculator</a>
+      <a href="price-calculator.html">Price Calculator</a>
       <a href="customer-login.html">Customer Login</a>
     </div>
     <div class="right">
@@ -206,71 +228,50 @@
       </div>
     </div>
     <nav>
-      <a href="#">Home</a>
-      <a href="#portfolio">Siddhi Portfolio</a>
-      <div class="dropdown">
-        <a href="#">Services ▾</a>
-        <div class="dropdown-content">
-          <a href="#services-home">Home & Villa</a>
-          <a href="#services-apartments">Apartments</a>
-          <a href="#services-commercial">Commercial</a>
-          <a href="#services-hospitals">Hospital Care</a>
-          <a href="#services-halls">Convention Halls</a>
-          <a href="#services-custom">Custom Interiors</a>
-          <a href="#services-temples">Temple Designs</a>
-        </div>
-      </div>
-      <a href="#siddhitv">Siddhi TV</a>
-      <a href="#contact">Contact Us</a>
-      <a href="#about">About Us</a>
-      <div class="dropdown">
-        <a href="#">Cities ▾</a>
-        <div class="dropdown-content">
-          <a href="#city1">Vijayawada</a>
-          <a href="#city2">Guntur</a>
-          <a href="#city3">Chirala</a>
-          <a href="#city4">Nellore</a>
-          <a href="#city5">Hyderabad</a>
-          <a href="#city6">Chennai</a>
-        </div>
-      </div>
+      <a href="index.html">Home</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
     </nav>
   </header>
 
   <div class="hero">
-    <h1>Designing Spaces That Heal, Inspire & Function Beautifully</h1>
+    <video autoplay muted loop playsinline>
+      <source src="hero-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <h1 id="heroTitle">Book Free Consultation</h1>
+    <div class="hero-buttons">
+      <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
+    </div>
+    <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
+    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
-  <div id="priceForm" class="form-popup">
-    <h2>Price Calculator</h2>
-    <form>
-      <label for="projectType">Project Type:</label>
-      <select id="projectType" name="projectType">
-        <option value="villa">Villa</option>
-        <option value="apartment">Apartment</option>
-        <option value="commercial">Commercial</option>
-        <option value="hospital">Hospital</option>
-        <option value="convention">Convention Hall</option>
-      </select>
+  <script>
+    const sections = [
+      { title: "Book Free Consultation", link: "book-consultation.html" },
+      { title: "Calculate Now", link: "price-calculator.html" },
+      { title: "Visit Us", link: "visit-us.html" }
+    ];
+    let currentIndex = 0;
 
-      <label for="area">Total Area (sq.ft):</label>
-      <input type="number" id="area" name="area" required>
+    function updateSection() {
+      const section = sections[currentIndex];
+      document.getElementById("heroTitle").innerText = section.title;
+      document.getElementById("heroButton").innerText = section.title;
+      document.getElementById("heroButton").href = section.link;
+    }
 
-      <label for="budget">Estimated Budget (₹):</label>
-      <input type="number" id="budget" name="budget">
+    function cycleSection() {
+      currentIndex = (currentIndex + 1) % sections.length;
+      updateSection();
+    }
 
-      <label for="name">Your Name:</label>
-      <input type="text" id="name" name="name" required>
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" name="phone" required>
-
-      <button type="submit">Submit</button>
-      <button type="button" class="close" onclick="toggleCalculator()">Close</button>
-    </form>
-  </div>
+    function previousSection() {
+      currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+      updateSection();
+    }
+  </script>
 </body>
 </html>
