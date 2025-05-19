@@ -1,7 +1,7 @@
 const sections = [
-  { title: "Book Free Consultation", link: "book-consultation.html" },
-  { title: "Calculate Now", link: "price-calculator.html" },
-  { title: "Visit Us", link: "visit-us.html" }
+  { title: "BOOK FREE CONSULTATION", link: "book-consultation.html" },
+  { title: "CALACULATE NOW", link: "price-calculator.html" },
+  { title: "VISIT US", link: "visit-us.html" }
 ];
 let currentIndex = 0;
 
