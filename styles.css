@@ -199,30 +199,37 @@ nav a:focus {
   margin-top: 10px;
 }
 
-.hero-button,
-#heroButton {
+.hero-buttons-bottom {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: white;
+  z-index: 5;
+}
+
+.hero-buttons-bottom h1 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.hero-button-group a {
   background-color: #003366;
   color: white;
   padding: 12px 20px;
-  margin: 5px;
+  margin: 0 10px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  display: inline-flex;
-  align-items: center;
   transition: background 0.3s;
 }
 
-.hero-button:hover,
-#heroButton:hover {
+.hero-button-group a:hover {
   background-color: #00509e;
 }
 
-.hero-button .arrow,
-#heroButton .arrow {
-  margin-left: 10px;
-  font-size: 1.2em;
-}
 
 .left-buttons {
   position: absolute;
