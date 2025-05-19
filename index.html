@@ -77,25 +77,19 @@
   </header>
 
 <!-- Hero Section -->
-  <div class="hero">
-    <video autoplay muted loop playsinline>
-      <source src="hero-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="center-left-quote">
-      <span id="quoteText" class="main-quote">Mee Kalalu, Maa Roopakalpana!</span>
-      <div class="sub-quote">Designing Beauty Within Your Budget</div>
+  <div class="hero-section">
+  <div class="video-placeholder"></div>
+  <button class="arrow-button arrow-left" onclick="prevButton()">&#8592;</button>
+  <button class="arrow-button arrow-right" onclick="nextButton()">&#8594;</button>
+
+  <div class="hero-buttons-bottom">
+    <h1 id="heroTitle">BOOK FREE CONSULTATION</h1>
+    <div class="hero-button-slider">
+      <a id="slideButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
     </div>
-    </div>
-    
-    
-    <div class="hero-buttons-bottom">
-  <h1 id="heroTitle">BOOK FREE CONSULTATION</h1>
-  <div class="hero-button-group">
-    <a id="heroButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
+    <div id="dotContainer"></div>
   </div>
 </div>
-
 
   <script src="scripts.js"></script>
 <!-- Quote Cycling Script -->
