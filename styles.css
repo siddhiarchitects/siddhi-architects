@@ -178,6 +178,32 @@ nav a:hover {
   padding-top: 80px;
 }
 
+<style>
+  .center-left-quote {
+    position: absolute;
+    left: 80px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: left;
+    max-width: 50%;
+  }
+
+  .center-left-quote .main-quote {
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff6666; /* Light Red */
+    transition: opacity 0.5s ease-in-out;
+  }
+
+  .center-left-quote .sub-quote {
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin-top: 10px;
+  }
+</style>
+
+
 .hero-button, #heroButton {
   background-color: #003366;
   color: white;
