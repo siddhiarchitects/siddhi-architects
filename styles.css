@@ -51,8 +51,8 @@ body {
   font-size: 18px;
   background-color: white;
   padding: 8px;
-  width: 34px;
-  height: 34px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -180,20 +180,20 @@ nav a:focus {
 
 .center-left-quote {
   position: absolute;
-  left: 80px;
+  left: 20px;
   top: 50%;
   transform: translateY(-50%);
   text-align: left;
-  max-width: 50%;
+  max-width: 70%;
 }
 .center-left-quote .main-quote {
-  font-size: 50px;
+  font-size: 70px;
   font-weight: bold;
   color: #f44336;
   transition: opacity 0.5s ease-in-out;
 }
 .center-left-quote .sub-quote {
-  font-size: 30px;
+  font-size: 40px;
   font-weight: bold;
   color: white;
   margin-top: 10px;
