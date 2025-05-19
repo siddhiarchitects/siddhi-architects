@@ -191,7 +191,7 @@ nav a:hover {
   .center-left-quote .main-quote {
     font-size: 50px;
     font-weight: bold;
-    color: #ff6666; /* Light Red */
+    color: #f44336; /* Light Red */
     transition: opacity 0.5s ease-in-out;
   }
 
