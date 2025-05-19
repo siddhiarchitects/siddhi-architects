@@ -46,8 +46,8 @@
       <a href="#portfolio">Siddhi Portfolio</a>
 
       <div class="dropdown">
-        <a href="#">Services</a>
-        <div class="dropdown-content">
+        <a onclick="toggleDropdown('servicesDropdown')">Services ?</a>
+        <div class="dropdown-content" id="servicesDropdown">
           <a href="#services-home">Home & Villa</a>
           <a href="#services-apartments">Apartments</a>
           <a href="#services-commercial">Commercial</a>
@@ -63,8 +63,8 @@
       <a href="#about">About Us</a>
 
       <div class="dropdown">
-        <a href="#">Cities</a>
-        <div class="dropdown-content">
+        <a onclick="toggleDropdown('citiesDropdown')">Cities ?</a>
+        <div class="dropdown-content" id="citiesDropdown">
           <a href="#city1">Vijayawada</a>
           <a href="#city2">Guntur</a>
           <a href="#city3">Chirala</a>
@@ -76,46 +76,19 @@
     </nav>
   </header>
 
-<!-- Hero Section -->
   <div class="hero">
     <video autoplay muted loop playsinline>
       <source src="hero-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
     </video>
-    <div class="center-left-quote">
-      <span id="quoteText" class="main-quote">Mee Kalalu, Maa Roopakalpana!</span>
-      <div class="sub-quote">Designing Beauty Within Your Budget</div>
-    </div>
-    </div>
-    
-    
-    <h1 id="heroTitle">Home To Beautiful Interiors</h1>
+    <h1 id="heroTitle">Book Free Consultation</h1>
     <div class="hero-buttons">
-      <a id="heroButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
+      <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
     </div>
     <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
     <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
   <script src="scripts.js"></script>
-<!-- Quote Cycling Script -->
-
-  <script>
-    const quotes = [
-      "Mee Kalalu, Maa Roopakalpana!",
-      "Your Dreams, Our Design!"
-    ];
-    let quoteIndex = 0;
-    setInterval(() => {
-      quoteIndex = (quoteIndex + 1) % quotes.length;
-      const quoteEl = document.getElementById("quoteText");
-      quoteEl.style.opacity = 0;
-      setTimeout(() => {
-        quoteEl.innerText = quotes[quoteIndex];
-        quoteEl.style.opacity = 1;
-      }, 500);
-    }, 6000);
-  </script>
-
 </body>
 </html>
