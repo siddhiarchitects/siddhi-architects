@@ -15,8 +15,15 @@
   <link rel="stylesheet" href="styles.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
+  <!-- Smooth scrolling -->
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+  </style>
 </head>
 <body>
+  <!-- Top Bar -->
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
@@ -35,6 +42,7 @@
     </div>
   </div>
 
+  <!-- Header -->
   <header>
     <div class="logo-title">
       <img src="salogo.png" alt="Siddhi Architects Logo">
@@ -44,7 +52,7 @@
       </div>
     </div>
     <nav>
-      <a href="#">Home</a>
+      <a href="#home">Home</a>
       <a href="#portfolio">Siddhi Portfolio</a>
 
       <div class="dropdown">
@@ -78,7 +86,8 @@
     </nav>
   </header>
 
-  <div class="hero">
+  <!-- Hero Section / Home -->
+  <div class="hero" id="home">
     <video autoplay muted loop playsinline>
       <source src="hero-video.mp4" type="video/mp4">
       Your browser does not support the video tag.
@@ -91,15 +100,64 @@
     <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
+  <!-- Portfolio Section -->
+  <section id="portfolio">
+    <h2>Siddhi Portfolio</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- Services Sections -->
+  <section id="services">
+    <h2>Our Services</h2>
+  </section>
+
+  <section id="services-home"><h3>Home & Villa</h3></section>
+  <section id="services-apartments"><h3>Apartments</h3></section>
+  <section id="services-commercial"><h3>Commercial</h3></section>
+  <section id="services-hospitals"><h3>Hospital Care</h3></section>
+  <section id="services-halls"><h3>Convention Halls</h3></section>
+  <section id="services-custom"><h3>Custom Interiors</h3></section>
+  <section id="services-temples"><h3>Temple Designs</h3></section>
+
+  <!-- Siddhi TV -->
+  <section id="siddhitv">
+    <h2>Siddhi TV</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- Contact Us -->
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Coming soon...</p>
+  </section>
+
+  <!-- Cities -->
+  <section id="cities">
+    <h2>Cities We Serve</h2>
+  </section>
+
+  <section id="city1"><h3>Vijayawada</h3></section>
+  <section id="city2"><h3>Guntur</h3></section>
+  <section id="city3"><h3>Chirala</h3></section>
+  <section id="city4"><h3>Nellore</h3></section>
+  <section id="city5"><h3>Hyderabad</h3></section>
+  <section id="city6"><h3>Chennai</h3></section>
+
+  <!-- Scripts -->
   <script src="scripts.js"></script>
 
+  <!-- Footer -->
   <div id="footer-placeholder"></div>
-
   <script>
     fetch('footer.html')
       .then(res => res.text())
       .then(html => document.getElementById('footer-placeholder').innerHTML = html);
   </script>
-
 </body>
 </html>
