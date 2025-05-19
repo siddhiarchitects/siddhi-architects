@@ -245,16 +245,23 @@ nav a:focus {
   top: 50%;
   transform: translateY(-50%);
   font-size: 2rem;
-  background-color: rgba(0,0,0,0.5);
-  padding: 10px;
+  padding: 0.5rem;
   border-radius: 50%;
   cursor: pointer;
+  user-select: none;
+  z-index: 10; /* Ensures it stays above other elements */
+  transition: background-color 0.3s ease;
 }
+
+.nav-arrow:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
 .nav-arrow.right {
-  right: 25px;
+  right: 5px;
 }
 .nav-arrow.left {
-  left: 25px;
+  left: 55px;
 }
 
 /* RESPONSIVE */
