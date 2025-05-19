@@ -23,10 +23,10 @@
     /* Navbar spacing fixes */
        nav a, nav .dropdown > a {
        margin: 0 10px;
-    }
+    }*/
 
        nav a:first-of-type {
-       margin-left: 0; /* Pull Home slightly left */
+       margin-left: -4px; /* Pull Home slightly left */
     }
 
     /* Top bar */
@@ -36,6 +36,8 @@
       display: flex;
       justify-content: space-between;
       font-size: 14px;
+      cursor: pointer;
+      transition: color 0.3s ease;
       align-items: center;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
       position: sticky;
@@ -97,10 +99,10 @@
     }
 
     /* Icon colors */
-    .social-icons a.facebook i { color: #1877F2; }
-    .social-icons a.linkedin i { color: #0A66C2; }
     .social-icons a.instagram i { color: #E1306C; }
     .social-icons a.youtube i { color: #FF0000; }
+    .social-icons a.facebook i { color: #1877F2; }
+    .social-icons a.linkedin i { color: #0A66C2; }
     .social-icons a.pinterest i { color: #E60023; }
 
     /* Header */
@@ -237,7 +239,7 @@
       transition: opacity 0.3s ease-in-out;
     }
     .hero-quote .sub-quote {
-      font-size: 20px;
+      font-size: 25px;
       font-weight: 500;
       color: white;
       letter-spacing: 0.03em;
@@ -247,15 +249,16 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: white;
       border: none;
-      color: white;
-      padding: 12px 16px;
+      color: black;
+      padding: 2px 6px;
       font-size: 24px;
       cursor: pointer;
       z-index: 20;
       border-radius: 4px;
       user-select: none;
+      margin-left: 6px;
       transition: background-color 0.3s ease;
     }
 
@@ -285,10 +288,21 @@
       text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
     }
 
+     /* 🔧 Push "Book Free Consultation" slightly downward */
+    .book-consultation-section h2 {
+      margin-top: 30px;
+    }
+    
+    .book-consultation-section .consultation-button {
+      margin-top: 20px;
+      animation: zoomInOut 2s infinite;
+      border-radius: 20px; /* Rounded corners */
+     }
+    
      /* Zoom animation for button */
       @keyframes zoomPulse {
       0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
+      50% { transform: scale(1.05); }
       }
 
     .hero-button-slider a {
@@ -320,7 +334,7 @@
     }
     
     #dotContainer {
-      margin-top: 20px;
+      margin-top: 30px;
     }
   </style>
 </head>
@@ -328,17 +342,17 @@
 
   <div class="top-bar">
     <div class="left">
-      <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
-      <span><i class="fas fa-phone"></i> +91-82473-12188</span>
+      <a href="mailto:contact@siddhiarchitects.com">contact@siddhiarchitects.com</a> |
+      <a href="tel:+911234567890">+91 12345 67890</a>
       <a href="price-calculator.html" class="button-link">Price Calculator</a>
       <a href="customer-login.html" class="button-link">Customer Login</a>
     </div>
     <div class="right">
       <div class="social-icons">
-        <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
-        <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://www.instagram.com/siddhi_architects" target="_blank" class="instagram"><i class="fab fa-instagram"></i></a>
         <a href="https://www.youtube.com/siddhi_architects" target="_blank" class="youtube"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.facebook.com/" target="_blank" class="facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" class="linkedin"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://www.pinterest.com/" target="_blank" class="pinterest"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
