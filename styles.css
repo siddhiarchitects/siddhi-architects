@@ -230,31 +230,73 @@ nav a:hover i {
   }
 }
 
-.footer-bottom {
+.site-footer {
+  background-color: #1d1d1d;
+  color: #ffffff;
+  padding: 40px 20px 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 250px;
+  margin-bottom: 20px;
+}
+
+.footer-column h4,
+.footer-column h3 {
+  margin-bottom: 15px;
+  color: #f45b5b;
+}
+
+.footer-column p,
+.footer-column li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #ffffff;
+}
+
+.social-icons a {
+  color: #ccc;
+  margin-right: 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.social-icons a:hover {
+  color: #f45b5b;
+}
+
+.footer-bottom {
+  text-align: center;
   border-top: 1px solid #444;
   padding-top: 10px;
   font-size: 13px;
   color: #bbb;
-  flex-wrap: wrap;
 }
 
-.footer-bottom .footer-left {
-  flex: 1;
-  text-align: left;
-}
-
-.footer-bottom .footer-right {
-  flex: 1;
-  text-align: right;
-}
-
-.footer-bottom .footer-right a {
-  color: #f45b5b;
-  text-decoration: none;
-}
 
 .footer-bottom .footer-right a:hover {
   text-decoration: underline;
