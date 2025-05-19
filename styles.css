@@ -143,51 +143,81 @@ nav a:hover {
 }
 
 /* HERO */
-.hero {
-  height: 90vh;
+
+  .hero {
   position: relative;
+  height: 100vh;
   overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  flex-direction: column;
 }
+
 .hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero-overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
-  z-index: -1;
-}
-.hero h1 {
-  background: rgba(0,0,0,0.6);
-  padding: 20px;
-  border-radius: 10px;
-  font-size: 2.5rem;
-  max-width: 90%;
-}
-.hero-buttons {
-  margin-top: 30px;
   display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   align-items: center;
-  gap: 15px;
-}
-.hero-buttons a {
-  padding: 12px 20px;
-  font-size: 16px;
-  background-color: #f4803c;
+  padding-bottom: 40px;
+  background: rgba(0, 0, 0, 0.3); /* optional dark overlay */
   color: white;
-  text-decoration: none;
+  text-align: center;
+}
+
+#heroTitle {
+  margin-bottom: auto;
+  font-size: 2.5rem;
+  padding-top: 80px;
+}
+
+.hero-button, #heroButton {
+  background-color: #003366;
+  color: white;
+  padding: 12px 20px;
+  margin: 5px;
   border-radius: 6px;
-  transition: background-color 0.3s;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  transition: background 0.3s;
 }
-.hero-buttons a:hover {
-  background-color: #d76625;
+
+.hero-button:hover, #heroButton:hover {
+  background-color: #00509e;
 }
+
+.hero-button .arrow,
+#heroButton .arrow {
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+/* Positioning */
+.left-buttons {
+  position: absolute;
+  left: 30px;
+  bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.center-button {
+  position: absolute;
+  bottom: 30px;
+  right: 30px;
+}
+
+
 .nav-arrow {
   position: absolute;
   top: 50%;
