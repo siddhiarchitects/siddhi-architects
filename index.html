@@ -19,6 +19,15 @@
       background-color: #fff;
       overflow-x: hidden; /* Prevent left-right scroll */
     }
+    
+    /* Navbar spacing fixes */
+       nav a, nav .dropdown > a {
+       margin: 0 10px;
+    }
+
+       nav a:first-of-type {
+       margin-left: 0; /* Pull Home slightly left */
+    }
 
     /* Top bar */
     .top-bar {
@@ -219,19 +228,19 @@
       user-select: none;
     }
     .hero-quote .main-quote {
-      font-size: 42px; /* Bigger font */
+      font-size: 40px; /* Bigger font */
       font-weight: 700;
       margin-bottom: 10px;
-      color: redcoral;
+      color: lightcoral;
       white-space: nowrap; /* Keep in single line */
       text-shadow: 1px 1px 10px rgba(0,0,0,0.85);
-      transition: opacity 0.5s ease-in-out;
+      transition: opacity 0.3s ease-in-out;
     }
     .hero-quote .sub-quote {
-      font-size: 21px;
+      font-size: 20px;
       font-weight: 500;
-      color: #ddd;
-      letter-spacing: 0.02em;
+      color: white;
+      letter-spacing: 0.03em;
     }
 
     .arrow-button {
@@ -276,16 +285,23 @@
       text-shadow: 1px 1px 8px rgba(0,0,0,0.7);
     }
 
+     /* Zoom animation for button */
+      @keyframes zoomPulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.1); }
+      }
+
     .hero-button-slider a {
       display: inline-block;
       background-color: lightcoral;
       color: white;
       padding: 14px 28px;
       text-decoration: none;
-      border-radius: 6px;
+      border-radius: 30px;
       font-weight: 600;
       font-size: 18px;
       transition: background-color 0.3s ease;
+      animation: zoomPulse 2s infinite;
     }
 
     .hero-button-slider a:hover {
@@ -301,6 +317,10 @@
       border-radius: 50%;
       transition: transform 0.3s, opacity 0.3s;
       cursor: pointer;
+    }
+    
+    #dotContainer {
+      margin-top: 20px;
     }
   </style>
 </head>
