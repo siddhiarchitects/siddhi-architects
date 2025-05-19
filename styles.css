@@ -237,10 +237,15 @@ nav a:hover {
 }
 
 /* Footer top & middle container */
-.footer-top,
+.footer-top {
+  padding: 40px 20px;
+  background-color: white;  /* Changed to white */
+  border-radius: 10px;      /* optional, if you want rounded corners */
+}
+
 .footer-middle {
   padding: 40px 20px;
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* light gray */
 }
 
 /* Footer grid layout */
