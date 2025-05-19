@@ -180,11 +180,11 @@ nav a:focus {
 
 .center-left-quote {
   position: absolute;
-  left: 20px;
+  left: 5px;
   top: 50%;
   transform: translateY(-50%);
   text-align: left;
-  max-width: 70%;
+  max-width: 80%;
 }
 .center-left-quote .main-quote {
   font-size: 70px;
