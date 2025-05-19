@@ -17,6 +17,7 @@
       margin: 0;
       font-family: 'Inter', sans-serif;
       background-color: #fff;
+      overflow-x: hidden; /* Prevent left-right scroll */
     }
 
     /* Top bar */
@@ -218,14 +219,16 @@
       user-select: none;
     }
     .hero-quote .main-quote {
-      font-size: 32px;
+      font-size: 42px; /* Bigger font */
       font-weight: 700;
       margin-bottom: 10px;
+      color: redcoral;
+      white-space: nowrap; /* Keep in single line */
+      text-shadow: 1px 1px 10px rgba(0,0,0,0.85);
       transition: opacity 0.5s ease-in-out;
-      line-height: 1.3;
     }
     .hero-quote .sub-quote {
-      font-size: 18px;
+      font-size: 21px;
       font-weight: 500;
       color: #ddd;
       letter-spacing: 0.02em;
