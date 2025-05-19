@@ -230,81 +230,98 @@ nav a:hover i {
   }
 }
 
-.site-footer {
-  background-color: #f9f9f9;
-  color: #222;
-  font-family: 'Poppins', sans-serif;
-  padding: 40px 20px 0;
-  border-top: 4px solid #d48b00;
+footer {
+  background: #f7f7f7;
+  color: #333;
+  font-family: 'Inter', sans-serif;
 }
 
 .footer-top {
+  padding: 40px 20px;
+  border-top: 2px solid #ccc;
+}
+
+.footer-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 30px;
-  margin-bottom: 20px;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.footer-column {
+.footer-col {
   flex: 1 1 200px;
+  margin: 20px;
 }
 
-.footer-column h3 {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
+.footer-col h4 {
   margin-bottom: 15px;
-  text-transform: uppercase;
-  border-left: 3px solid #d48b00;
-  padding-left: 8px;
+  font-size: 16px;
+  color: #1e3556;
 }
 
-.footer-column ul {
+.footer-col ul {
   list-style: none;
   padding: 0;
-  margin: 0;
 }
 
-.footer-column ul li {
+.footer-col ul li {
+  margin-bottom: 8px;
+}
+
+.footer-col ul li a {
+  color: #333;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-col ul li a:hover {
+  color: #f4803c;
+}
+
+.footer-col.logo img {
+  height: 60px;
   margin-bottom: 10px;
 }
 
-.footer-column ul li a {
-  text-decoration: none;
-  color: #444;
-  transition: color 0.3s;
+.footer-col.contact p {
+  margin: 5px 0;
 }
 
-.footer-column ul li a:hover {
-  color: #d48b00;
-}
-
-.footer-socials {
-  margin-top: 15px;
-}
-
-.footer-socials a {
+.footer-social a {
   display: inline-block;
   margin-right: 10px;
   font-size: 18px;
-  color: #444;
-  transition: color 0.3s;
+  color: #1e3556;
+  background: #fff;
+  border-radius: 50%;
+  padding: 8px;
+  transition: background 0.3s;
 }
 
-.footer-socials a:hover {
-  color: #d48b00;
+.footer-social a:hover {
+  background: #f4803c;
+  color: #fff;
 }
 
 .footer-bottom {
-  border-top: 1px solid #ddd;
-  padding: 15px 0;
-  text-align: center;
+  background: #101820;
+  color: #fff;
+  padding: 15px 20px;
   font-size: 14px;
-  color: #555;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.footer-bottom a {
-  color: #007BFF;
-  text-decoration: none;
+/* Sticky Footer Logic */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
 }
