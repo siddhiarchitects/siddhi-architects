@@ -88,16 +88,30 @@
 
   <!-- Hero Section / Home -->
   <div class="hero" id="home">
-    <video autoplay muted loop playsinline>
-      <source src="hero-video.mp4" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
+  <video autoplay muted loop playsinline>
+    <source src="hero-video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Overlay content -->
+  <div class="hero-overlay">
     <h1 id="heroTitle">Home To Beautiful Interiors</h1>
-    <div class="hero-buttons">
-      <a id="heroButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
+
+    <!-- Bottom Left Buttons -->
+    <div class="left-buttons">
+      <a href="price-calculator.html" class="hero-button">CALCULATE NOW</a>
+      <a href="visit-us.html" class="hero-button">VISIT US</a>
     </div>
-    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
+
+    <!-- Center Button -->
+    <div class="center-button">
+      <a id="heroButton" href="book-consultation.html">
+        BOOK FREE CONSULTATION <span class="arrow">&#x276F;</span>
+      </a>
+    </div>
   </div>
+</div>
+
 
 
 
