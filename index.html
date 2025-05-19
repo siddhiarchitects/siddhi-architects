@@ -1,227 +1,20 @@
-\[media pointer="file-service://file-DTd5gMvgFKu9UeheMkqyP7"]
-
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Siddhi Architects - Interior and Architecture Excellence">
+  <meta property="og:title" content="Siddhi Architects - Interior and Architecture Excellence" />
+  <meta property="og:description" content="Elegant and functional designs for residential, commercial, and hospital spaces." />
+  <meta property="og:image" content="https://yoursite.com/preview-image.jpg" />
+  <meta property="og:url" content="https://yoursite.com/" />
   <title>Siddhi Architects | Home</title>
   <link rel="icon" href="salogo.png" type="image/png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Inter', sans-serif; color: #333; background: #fff; }
-
-    /* --- Top Bar --- */
-    .top-bar {
-      background-color: #1e3556;
-      color: white;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 30px;
-      font-size: 14px;
-      flex-wrap: wrap;
-    }
-    .top-bar .left {
-      display: flex;
-      align-items: center;
-      gap: 20px;
-    }
-    .top-bar .left i { margin-right: 5px; }
-    .top-bar .left a {
-      background: #f4803c;
-      color: white;
-      text-decoration: none;
-      padding: 6px 12px;
-      border-radius: 4px;
-    }
-    .top-bar .right {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-    .top-bar .social-icons {
-      display: flex;
-      gap: 10px;
-    }
-    .top-bar .social-icons a {
-      text-decoration: none;
-      font-size: 18px;
-      background-color: white;
-      padding: 8px;
-      width: 34px;
-      height: 34px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 4px;
-    }
-    .top-bar .social-icons a .fa-facebook-f { color: #3b5998; }
-    .top-bar .social-icons a .fa-linkedin-in { color: #0077b5; }
-    .top-bar .social-icons a .fa-instagram { color: #e4405f; }
-    .top-bar .social-icons a .fa-youtube { color: #ff0000; }
-    .top-bar .social-icons a .fa-pinterest-p { color: #bd081c; }
-
-    /* --- Header --- */
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      background: #fff;
-      padding: 15px 30px;
-      border-bottom: 2px solid #ddd;
-      flex-wrap: wrap;
-    }
-    .logo-title {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-    }
-    .logo-title img { height: 60px; }
-    .logo-text { display: flex; flex-direction: column; }
-    .logo-text h1 {
-      font-size: 1.8rem;
-      color: #222;
-      font-weight: bold;
-    }
-    .logo-text .logo-subtitle {
-      font-size: 0.9rem;
-      color: #666;
-    }
-
-    /* --- Navigation Menu --- */
-    nav {
-      display: flex;
-      align-items: center;
-      gap: 25px;
-      font-weight: 500;
-      position: relative;
-    }
-    nav a {
-      color: #333;
-      text-decoration: none;
-      padding: 8px 10px;
-      transition: color 0.3s;
-    }
-    nav a:hover { color: #b30000; }
-
-    /* Dropdown Styles */
-    nav .dropdown {
-      position: relative;
-      display: inline-block;
-    }
-    nav .dropdown > a::after {
-      content: " ▼";
-      font-size: 12px;
-    }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      background-color: white;
-      min-width: 160px;
-      z-index: 1;
-      border: 1px solid #ddd;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    nav .dropdown-content a {
-      color: #333;
-      padding: 10px 14px;
-      text-decoration: none;
-      display: block;
-      white-space: nowrap;
-    }
-    nav .dropdown-content a:hover {
-      background-color: #f4803c;
-      color: white;
-    }
-    nav .dropdown:hover .dropdown-content {
-      display: block;
-    }
-
-    /* --- Hero Section --- */
-    .hero {
-      position: relative;
-      width: 100%;
-      height: 90vh;
-      overflow: hidden;
-    }
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .center-left-quote {
-      position: absolute;
-      left: 120px;
-      top: 50%;
-      transform: translateY(-50%);
-      text-align: left;
-      max-width: 50%;
-      z-index: 2;
-    }
-    .center-left-quote .main-quote {
-      font-size: 50px;
-      font-weight: bold;
-      color: #f4803c;
-      transition: opacity 0.5s ease-in-out;
-    }
-    .center-left-quote .sub-quote {
-      font-size: 30px;
-      font-weight: bold;
-      color: white;
-      margin-top: 10px;
-    }
-
-    /* --- Below Video Buttons --- */
-    .below-video-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 30px 0;
-      background: #f9f9f9;
-    }
-    .below-video-buttons a {
-      background-color: #b30000;
-      color: white;
-      text-decoration: none;
-      padding: 14px 24px;
-      font-size: 16px;
-      border-radius: 6px;
-      font-weight: 600;
-      transition: background-color 0.3s;
-    }
-    .below-video-buttons a:hover {
-      background-color: #8a0000;
-    }
-
-    @media (max-width: 768px) {
-      nav { flex-direction: column; gap: 10px; }
-      header { flex-direction: column; align-items: flex-start; }
-      .center-left-quote {
-        font-size: 1.2rem;
-        max-width: 80%;
-        left: 20px;
-      }
-      .below-video-buttons {
-        flex-direction: column;
-        align-items: center;
-      }
-    }
-  </style>
-
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
-  <!-- Top Bar -->
   <div class="top-bar">
     <div class="left">
       <span><i class="fas fa-envelope"></i> siddhiarchitects2025@gmail.com</span>
@@ -231,20 +24,18 @@
     </div>
     <div class="right">
       <div class="social-icons">
-        <a href="#"><i class="fab fa-facebook-f"></i></a>
-        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-        <a href="#"><i class="fab fa-instagram"></i></a>
-        <a href="#"><i class="fab fa-youtube"></i></a>
-        <a href="#"><i class="fab fa-pinterest-p"></i></a>
+        <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/siddhi_architects" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.youtube.com/siddhi_architects" target="_blank"><i class="fab fa-youtube"></i></a>
+        <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
       </div>
     </div>
   </div>
 
-  <!-- Header -->
-
   <header>
     <div class="logo-title">
-      <img src="salogo.png" alt="Logo">
+      <img src="salogo.png" alt="Siddhi Architects Logo">
       <div class="logo-text">
         <h1>SIDDHI ARCHITECTS</h1>
         <div class="logo-subtitle">Interior | Architecture</div>
@@ -252,32 +43,40 @@
     </div>
     <nav>
       <a href="#">Home</a>
-      <a href="#">Siddhi Portfolio</a>
+      <a href="#portfolio">Siddhi Portfolio</a>
+
       <div class="dropdown">
         <a href="#">Services</a>
         <div class="dropdown-content">
-          <a href="#">Architecture</a>
-          <a href="#">Interior Design</a>
-          <a href="#">Turnkey Projects</a>
+          <a href="#services-home">Home & Villa</a>
+          <a href="#services-apartments">Apartments</a>
+          <a href="#services-commercial">Commercial</a>
+          <a href="#services-hospitals">Hospital Care</a>
+          <a href="#services-halls">Convention Halls</a>
+          <a href="#services-custom">Custom Interiors</a>
+          <a href="#services-temples">Temple Designs</a>
         </div>
       </div>
-      <a href="#">Siddhi TV</a>
-      <a href="#">Contact Us</a>
-      <a href="#">About Us</a>
+
+      <a href="#siddhitv">Siddhi TV</a>
+      <a href="#contact">Contact Us</a>
+      <a href="#about">About Us</a>
+
       <div class="dropdown">
         <a href="#">Cities</a>
         <div class="dropdown-content">
-          <a href="#">Hyderabad</a>
-          <a href="#">Bangalore</a>
-          <a href="#">Chennai</a>
-          <a href="#">Vizag</a>
+          <a href="#city1">Vijayawada</a>
+          <a href="#city2">Guntur</a>
+          <a href="#city3">Chirala</a>
+          <a href="#city4">Nellore</a>
+          <a href="#city5">Hyderabad</a>
+          <a href="#city6">Chennai</a>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-
+<!-- Hero Section -->
   <div class="hero">
     <video autoplay muted loop playsinline>
       <source src="hero-video.mp4" type="video/mp4">
@@ -287,17 +86,19 @@
       <span id="quoteText" class="main-quote">Mee Kalalu, Maa Roopakalpana!</span>
       <div class="sub-quote">Designing Beauty Within Your Budget</div>
     </div>
+    </div>
+    
+    
+    <h1 id="heroTitle">Home To Beautiful Interiors</h1>
+    <div class="hero-buttons">
+      <a id="heroButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
+    </div>
+    <div class="nav-arrow left" onclick="previousSection()">&#x276E;</div>
+    <div class="nav-arrow right" onclick="cycleSection()">&#x276F;</div>
   </div>
 
-  <!-- Buttons BELOW the video -->
-
-  <div class="below-video-buttons">
-    <a id="heroButton" href="book-consultation.html">Book Free Consultation</a>
-    <a id="calculateBtn" href="price-calculator.html">Calculate Now</a>
-    <a id="visitBtn" href="visit-us.html">Visit Us</a>
-  </div>
-
-  <!-- Quote Cycling Script -->
+  <script src="scripts.js"></script>
+<!-- Quote Cycling Script -->
 
   <script>
     const quotes = [
@@ -318,4 +119,3 @@
 
 </body>
 </html>
-In above code I need 3 buttons like as shown in image colour also same buttons placing also same
