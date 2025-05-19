@@ -1,4 +1,5 @@
-* {
+/* RESET & GLOBAL */
+* { 
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,6 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
+/* TOP BAR */
 .top-bar {
   background-color: #1e3556;
   color: white;
@@ -62,6 +64,7 @@ body {
 .top-bar .social-icons a .fa-youtube { color: #ff0000; }
 .top-bar .social-icons a .fa-pinterest-p { color: #bd081c; }
 
+/* HEADER */
 header {
   display: flex;
   align-items: center;
@@ -92,6 +95,7 @@ header {
   color: #666;
 }
 
+/* NAVIGATION */
 nav {
   display: flex;
   align-items: center;
@@ -110,6 +114,7 @@ nav a:hover {
   color: #b30000;
 }
 
+/* DROPDOWN */
 .dropdown {
   position: relative;
 }
@@ -137,6 +142,7 @@ nav a:hover {
   display: block;
 }
 
+/* HERO */
 .hero {
   height: 90vh;
   position: relative;
@@ -221,14 +227,23 @@ nav a:hover {
   }
 }
 
-
 /* FOOTER STYLING */
+
+/* White background container for top footer section */
+.white-bg {
+  background-color: white;
+  padding: 40px 20px;
+  border-radius: 10px;
+}
+
+/* Footer top & middle container */
 .footer-top,
 .footer-middle {
   padding: 40px 20px;
   background-color: #f5f5f5;
 }
 
+/* Footer grid layout */
 .footer-grid {
   display: flex;
   flex-wrap: wrap;
@@ -236,21 +251,25 @@ nav a:hover {
   justify-content: space-between;
 }
 
+/* Footer columns */
 .footer-col {
   flex: 1 1 220px;
   min-width: 200px;
 }
 
+/* Wide footer column for bigger content */
 .footer-col.wide {
   flex: 2 1 400px;
 }
 
+/* Footer headings */
 .footer-col h3, .footer-col h4 {
   font-size: 18px;
   margin-bottom: 15px;
   color: #333;
 }
 
+/* Lists in footer */
 .footer-col ul {
   list-style: none;
   padding: 0;
@@ -270,11 +289,13 @@ nav a:hover {
   color: #000;
 }
 
+/* Contact info styling */
 .contact-info p, .contact-info a {
   font-size: 14px;
   color: #444;
 }
 
+/* Social icons in footer */
 .social-icons a {
   margin-right: 12px;
   font-weight: bold;
@@ -282,16 +303,11 @@ nav a:hover {
   color: #555;
 }
 
+/* Bottom footer bar */
 .footer-bar {
   background-color: #001f3f;
   color: white;
   text-align: center;
   padding: 12px;
   font-size: 14px;
-}
-
-.white-bg {
-  background-color: white;
-  padding: 20px;
-  border-radius: 10px;
 }
