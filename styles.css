@@ -201,6 +201,12 @@ nav a:hover {
   font-size: 1.2em;
 }
 
+.left-buttons {
+  flex-direction: row;
+  gap: 10px;
+}
+
+
 /* Positioning */
 .left-buttons {
   position: absolute;
