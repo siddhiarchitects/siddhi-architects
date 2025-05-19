@@ -230,21 +230,33 @@ nav a:hover i {
   }
 }
 
-footer a {
-  color: #333;
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #444;
+  padding-top: 10px;
+  font-size: 13px;
+  color: #bbb;
+  flex-wrap: wrap;
+}
+
+.footer-bottom .footer-left {
+  flex: 1;
+  text-align: left;
+}
+
+.footer-bottom .footer-right {
+  flex: 1;
+  text-align: right;
+}
+
+.footer-bottom .footer-right a {
+  color: #f45b5b;
   text-decoration: none;
 }
-footer a:hover {
+
+.footer-bottom .footer-right a:hover {
   text-decoration: underline;
 }
-footer h5 {
-  font-weight: bold;
-  margin-bottom: 15px;
-}
-footer ul {
-  padding-left: 0;
-  list-style: none;
-}
-footer ul li {
-  margin-bottom: 8px;
-}
+
