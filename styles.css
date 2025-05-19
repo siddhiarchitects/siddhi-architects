@@ -289,3 +289,9 @@ nav a:hover {
   padding: 12px;
   font-size: 14px;
 }
+
+.white-bg {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
