@@ -142,7 +142,7 @@
 
     /* Dropdown arrow */
     nav .dropdown > a::after {
-      content: " ▼";
+      content: " ^";
       font-size: 12px;
       color: #333;
     }
@@ -355,6 +355,7 @@
           <a href="#city3">Chirala</a>
           <a href="#city4">Nellore</a>
           <a href="#city5">Hyderabad</a>
+          <a href="#city6">Chennai</a>
         </div>
       </div>
     </nav>
@@ -362,60 +363,114 @@
 
   <section class="hero-section">
     <video autoplay muted loop playsinline>
-      <source src="vid.mp4" type="video/mp4" />
+      <source src="hero-video.mp4" type="video/mp4" />
       Your browser does not support the video tag.
     </video>
 
+    <!-- Quote placed at left center -->
     <div class="hero-quote">
-      <div class="main-quote">Mee Kalalu, Maa Rupakalpanalu</div>
-      <div class="sub-quote">Designing Within Your Budh</div>
+      <div class="main-quote"id="quoteText">Mee Kalalu, Maa Roopakalpanalu!</div>
+      <div class="sub-quote">Designing Within Your Budget!</div>
 
     </div>
 
-    <button class="arrow-button arrow-right" aria-label="Next Quote">&#9654;</button>
+    <button class="arrow-button arrow-right" onclick="nextButton()">&#8594;</button>
 
     <div class="hero-buttons-bottom">
-      <h1>Siddhi Architects</h1>
+      <h1 id="heroTitle">BOOK FREE CONSULTATION</h1>
       <div class="hero-button-slider">
-        <a href="#portfolio">View Portfolio</a>
+        <a id="slideButton" href="book-consultation.html">BOOK FREE CONSULTATION</a>
       </div>
+      <div id="dotContainer"></div>
     </div>
-  </section>
+  </div>
 
+  <!-- Scripts -->
   <script>
-    // JavaScript for quote cycling on right arrow click
-    const quotes = [
-      {
-        main: "Creating Spaces<br />That Inspire & Reflect You",
-        sub: "Elegant, Functional & Timeless Interiors"
-      },
-      {
-        main: "Designing Dreams<br />With Precision & Passion",
-        sub: "Innovative Architecture Tailored for You"
-      },
-      {
-        main: "Transforming Ideas<br />Into Beautiful Realities",
-        sub: "Expertise in Residential & Commercial Design"
-      }
+    const slideData = [
+      { text: "BOOK FREE CONSULTATION", link: "book-consultation.html" },
+      { text: "CALCULATE NOW", link: "price-calculator.html" },
+      { text: "VISIT US", link: "#contact" }
+
     ];
 
-    let currentQuoteIndex = 0;
-    const mainQuoteElem = document.getElementById('quote-text');
-    const subQuoteElem = document.getElementById('quote-subtext');
-    const nextButton = document.querySelector('.arrow-right');
+    let currentIndex = 0;
 
-    nextButton.addEventListener('click', () => {
-      currentQuoteIndex = (currentQuoteIndex + 1) % quotes.length;
-      mainQuoteElem.style.opacity = 0;
-      subQuoteElem.style.opacity = 0;
+    function updateButton(animated = true) {
+      const btn = document.getElementById("slideButton");
+      const title = document.getElementById("heroTitle");
 
-      setTimeout(() => {
-        mainQuoteElem.innerHTML = quotes[currentQuoteIndex].main;
-        subQuoteElem.textContent = quotes[currentQuoteIndex].sub;
+      if (animated) {
+        btn.style.opacity = 0;
+        title.style.opacity = 0;
 
-        mainQuoteElem.style.opacity = 1;
-        subQuoteElem.style.opacity = 1;
-      }, 300);
+        setTimeout(() => {
+          const data = slideData[currentIndex];
+          btn.textContent = data.text;
+          btn.href = data.link;
+          title.textContent = data.text;
+          btn.style.opacity = 1;
+          title.style.opacity = 1;
+          updateDots();
+        }, 300);
+      } else {
+        const data = slideData[currentIndex];
+        btn.textContent = data.text;
+        btn.href = data.link;
+        title.textContent = data.text;
+        updateDots();
+      }
+    }
+
+    function nextButton() {
+      currentIndex = (currentIndex + 1) % slideData.length;
+      updateButton();
+    }
+
+    function updateDots() {
+      const dots = document.querySelectorAll('.slide-dot');
+      dots.forEach((dot, index) => {
+        dot.style.opacity = index === currentIndex ? '1' : '0.5';
+        dot.style.transform = index === currentIndex ? 'scale(1.2)' : 'scale(1)';
+      });
+    }
+
+    function createDots() {
+      const container = document.getElementById('dotContainer');
+      container.innerHTML = '';
+      slideData.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.className = 'slide-dot';
+        dot.addEventListener('click', () => {
+          currentIndex = index;
+          updateButton();
+        });
+        container.appendChild(dot);
+      });
+    }
+
+    function updateQuote() {
+      const quotes = [
+        "Mee Kalalu, Maa Roopakalpana!",
+        "Your Dreams, Our Design!"
+      ];
+      let quoteIndex = 0;
+      const quoteEl = document.getElementById("quoteText");
+
+      setInterval(() => {
+        quoteIndex = (quoteIndex + 1) % quotes.length;
+        quoteEl.style.opacity = 0;
+        setTimeout(() => {
+          quoteEl.textContent = quotes[quoteIndex];
+          quoteEl.style.opacity = 1;
+        }, 500);
+      }, 6000);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      createDots();
+      updateButton(false);
+      updateQuote();
     });
   </script>
 
