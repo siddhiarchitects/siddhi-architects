@@ -272,9 +272,10 @@
       right: 25px;
     }
 
+    /* Moved this down by changing bottom from 50px to 30px */
     .hero-buttons-bottom {
       position: absolute;
-      bottom: 50px;
+      bottom: 30px; /* moved down */
       width: 100%;
       text-align: center;
       color: white;
@@ -295,19 +296,39 @@
     .book-consultation-section h2 {
       margin-top: 30px;
     }
-    
+
     .book-consultation-section .consultation-button {
       margin-top: 25px;
       animation: zoomInOut 2s infinite;
       border-radius: 20px; /* Rounded corners */
      }
     
-     /* Zoom animation for button */
+    /* Zoom animation for button */
       @keyframes zoomPulse {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.05); }
       }
 
+    /* Consultation button */
+    .consultation-button {
+      padding: 14px 32px;
+      background: linear-gradient(45deg, coral, #ff7f50);
+      border: none;
+      color: white;
+      font-size: 22px;
+      font-weight: 700;
+      cursor: pointer;
+      text-transform: uppercase;
+      box-shadow: 0 4px 12px coral;
+      user-select: none;
+      transition: box-shadow 0.3s ease;
+    }
+
+    .consultation-button:hover {
+      box-shadow: 0 6px 20px coral;
+      background: linear-gradient(45deg, #ff6347, #ff4500);
+    }
+    
     .hero-button-slider a {
      display: inline-block;
      background-color: lightcoral;
@@ -338,7 +359,7 @@
     }
     
     #dotContainer {
-      margin-top: 80px;
+      margin-top: 20px;
     }
   </style>
 </head>
