@@ -1,49 +1,38 @@
-        }, 300);
-      } else {
-        const data = slideData[currentIndex];
-        btn.textContent = data.text;
-        btn.href = data.link;
-        title.textContent = data.text;
-        updateDots();
-      }
-    }
+const sections = [
+  { title: "Book Free Consultation", link: "book-consultation.html" },
+  { title: "Calculate Now", link: "price-calculator.html" },
+  { title: "Visit Us", link: "visit-us.html" }
+];
+let currentIndex = 0;
 
-    function nextButton() {
-      currentIndex = (currentIndex + 1) % slideData.length;
-      updateButton();
-    }
+function updateSection() {
+  const section = sections[currentIndex];
+  document.getElementById("heroTitle").innerText = section.title;
+  document.getElementById("heroButton").innerText = section.title;
+  document.getElementById("heroButton").href = section.link;
+}
 
-    function createDots() {
-      const dotContainer = document.getElementById("dotContainer");
-      slideData.forEach((_, index) => {
-        const dot = document.createElement("span");
-        dot.classList.add("slide-dot");
-        dot.addEventListener("click", () => {
-          currentIndex = index;
-          updateButton();
-        });
-        dotContainer.appendChild(dot);
-      });
-    }
+function cycleSection() {
+  currentIndex = (currentIndex + 1) % sections.length;
+  updateSection();
+}
 
-    function updateDots() {
-      const dots = document.querySelectorAll(".slide-dot");
-      dots.forEach((dot, index) => {
-        if (index === currentIndex) {
-          dot.style.transform = "scale(1.5)";
-          dot.style.opacity = "1";
-        } else {
-          dot.style.transform = "scale(1)";
-          dot.style.opacity = "0.5";
-        }
-      });
-    }
+function previousSection() {
+  currentIndex = (currentIndex - 1 + sections.length) % sections.length;
+  updateSection();
+}
 
-    // Initialize
-    window.onload = function () {
-      createDots();
-      updateButton(false);
-    };
-  </script>
-</body>
-</html>
+function toggleDropdown(id) {
+  const dropdown = document.getElementById(id);
+  const allDropdowns = document.querySelectorAll('.dropdown-content');
+  allDropdowns.forEach(el => {
+    if (el.id !== id) el.classList.remove('show');
+  });
+  dropdown.classList.toggle('show');
+}
+
+window.addEventListener('click', function(e) {
+  if (!e.target.closest('.dropdown')) {
+    document.querySelectorAll('.dropdown-content').forEach(el => el.classList.remove('show'));
+  }
+});
