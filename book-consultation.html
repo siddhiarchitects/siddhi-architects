@@ -1,0 +1,54 @@
+<!-- Modal for Get Free Estimate Form -->
+<div id="estimate-modal" role="dialog" aria-modal="true" aria-labelledby="form-desc" aria-hidden="true">
+  <div class="modal-content">
+    <button class="modal-close" aria-label="Close form">&times;</button>
+    <form action="#" method="post" aria-describedby="form-desc">
+      <h2 id="form-desc" style="font-weight: 600; font-size: 22px; margin-bottom: 20px;">
+        Get Free Estimate
+      </h2>
+
+      <label for="name">Full Name *</label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter your full name"
+        required
+        autocomplete="name"
+      />
+
+      <label for="contact">Mobile Number *</label>
+      <input
+        type="tel"
+        id="contact"
+        name="contact"
+        placeholder="Enter your mobile number"
+        required
+        autocomplete="tel"
+        pattern="[0-9]{10}"
+        title="Please enter a 10-digit mobile number"
+      />
+
+      <label for="email">Email *</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        autocomplete="email"
+      />
+
+      <label for="services">Services *</label>
+      <select id="services" name="services" required>
+        <option value="" disabled selected>Select service</option>
+        <option value="residential">Residential Interiors</option>
+        <option value="commercial">Commercial Interiors</option>
+        <option value="hospitals">Hospitals</option>
+        <option value="exteriors">Exteriors</option>
+      </select>
+
+      <button type="submit">Get Estimate</button>
+    </form>
+  </div>
+</div>
